@@ -27,6 +27,7 @@ import ContactPerson from "./components/pages/ContactPerson";
 import Gallery from "./components/pages/Gallery";
 import Video from "./components/pages/Video";
 import HasilSurvei from "./components/pages/HasilSurvei/HasilSurvei";
+import Pengaduan from "./components/pages/Pengaduan";
 
 const theme = createTheme({
  typography: {
@@ -149,6 +150,10 @@ const router = createBrowserRouter([
       {
         path: "/hasil-survei",
         element: <HasilSurvei />,
+      },
+      {
+        path: "/pengaduan",
+        element: <Pengaduan />,
       },
     ],
   },

@@ -106,7 +106,7 @@ const Navbar = () => {
       { label: "Contact Person", path: "/contact-person" },
       { label: "Gallery", path: "/gallery" },
       { label: "Video", path: "/video" },
-      { label: "Kotak Saran", path: "https://saran.pkmkarjotarakan.com", isExternal: true },
+      { label: "Layanan Pengaduan", path: "/pengaduan" },
       { label: "Hasil Survei Kepuasan Masyarakat", path: "/hasil-survei" },
     ],
   };
