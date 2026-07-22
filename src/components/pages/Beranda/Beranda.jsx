@@ -1,9 +1,7 @@
 import React from "react";
-import { Box, Typography, Button, Grid, Paper, Container } from "@mui/material";
+import { Box, Typography, Button, Grid, Paper, Container, Avatar } from "@mui/material";
 import {
-  Newspaper,
   Users,
-  Award,
   CalendarDays,
   Phone,
   Activity,
@@ -26,20 +24,23 @@ const Dashboard = () => {
     {
       icon: <CalendarViewWeekRounded size={32} />,
       title: "Jadwal Pelayanan",
-      desc: "Informasi mengenai jadwal layanan di Puskesmas Karang Rejo.",
+      desc: "Informasi mengenai jadwal layanan poli di Puskesmas Karang Rejo.",
       path: "/jadwal",
+      color: "#193b68"
     },
     {
       icon: <Users size={32} />,
       title: "Pimpinan Puskesmas",
-      desc: "Mengenal lebih dekat pimpinan Puskesmas Karang rejo.",
+      desc: "Mengenal lebih dekat struktur kepemimpinan Puskesmas Karang rejo.",
       path: "/pimpinan",
+      color: "#D4AF37"
     },
     {
       icon: <AlertCircle size={32} />,
       title: "Pengumuman",
-      desc: "Informasi pengumuman di Puskesmas Karang Rejo.",
+      desc: "Pusat informasi terbaru dan pengumuman penting bagi masyarakat.",
       path: "/informasi/pengumuman",
+      color: "#50C878"
     },
   ];
 
@@ -51,22 +52,22 @@ const Dashboard = () => {
   ];
 
   return (
-    <Box sx={{ pb: 0, bgcolor: "#f4f7fb", overflowX: "hidden" }}>
+    <Box sx={{ pb: 0, bgcolor: "#f8fafc", overflowX: "hidden" }}>
       <HeroSection />
 
-      {/* Feature Cards (Diperbarui dengan efek Hover dan Gradien) */}
+      {/* Feature Cards (Premium Glassmorphism Style) */}
       <Container
         maxWidth="lg"
         sx={{ mt: { xs: -6, md: -10 }, position: "relative", zIndex: 10 }}>
         <Grid container spacing={4}>
           {features.map((item, index) => (
-            <Grid item size={{ xs: 12, md: 4 }} key={index}>
+            <Grid item xs={12} md={4} key={index}>
               <MotionPaper
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{
                   y: -12,
-                  boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.25)",
+                  boxShadow: `0 25px 50px -12px ${item.color}40`,
                 }}
                 transition={{
                   duration: 0.5,
@@ -76,12 +77,11 @@ const Dashboard = () => {
                 viewport={{ once: true }}
                 sx={{
                   p: 4,
-                  borderRadius: 5,
+                  borderRadius: 6,
                   height: "100%",
                   bgcolor: "white",
-                  // Border gradient halus untuk kesan profesional
-                  border: "1px solid rgba(59, 130, 246, 0.1)",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+                  border: "1px solid rgba(0,0,0,0.03)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
                   display: "flex",
                   flexDirection: "column",
                   overflow: "hidden",
@@ -92,26 +92,22 @@ const Dashboard = () => {
                     top: 0,
                     left: 0,
                     width: "100%",
-                    height: "4px",
-                    background: "linear-gradient(90deg, #3b82f6, #8b5cf6)",
+                    height: "6px",
+                    background: `linear-gradient(90deg, ${item.color}, ${item.color}90)`,
                   },
                 }}>
-                <Box
+                
+                <Avatar
                   sx={{
+                    width: 70,
+                    height: 70,
                     color: "white",
                     mb: 3,
-                    p: 2,
-                    background:
-                      "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)",
-                    borderRadius: 4,
-                    width: "fit-content",
-                    boxShadow: "0 8px 16px rgba(59, 130, 246, 0.3)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    background: `linear-gradient(135deg, ${item.color} 0%, ${item.color}CC 100%)`,
+                    boxShadow: `0 10px 20px ${item.color}40`,
                   }}>
                   {item.icon}
-                </Box>
+                </Avatar>
 
                 <Typography
                   variant="h6"
@@ -138,14 +134,17 @@ const Dashboard = () => {
                   onClick={() => navigate(item.path)}
                   sx={{
                     mt: 3,
-                    display: "flex",
+                    display: "inline-flex",
                     alignItems: "center",
-                    color: "#3b82f6",
-                    fontWeight: 600,
-                    fontSize: "0.85rem",
+                    justifyContent: "flex-start",
+                    color: item.color,
+                    fontWeight: 700,
+                    fontSize: "0.9rem",
+                    padding: 0,
+                    "&:hover": { bgcolor: "transparent", opacity: 0.8 }
                   }}>
-                  Pelajari Lebih Lanjut{" "}
-                  <ArrowRight size={16} style={{ marginLeft: "8px" }} />
+                  Pelajari Lebih Lanjut
+                  <ArrowRight size={18} style={{ marginLeft: "8px" }} />
                 </Button>
               </MotionPaper>
             </Grid>
@@ -155,56 +154,53 @@ const Dashboard = () => {
 
 
       {/* Promosi Telekonseling PMBA & VCT */}
-      <Container maxWidth="lg" sx={{ mt: 4, position: "relative", zIndex: 10 }}>
+      <Container maxWidth="lg" sx={{ mt: 8, position: "relative", zIndex: 10 }}>
         <MotionPaper
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
           sx={{
-            p: { xs: 4, md: 5 },
+            p: { xs: 4, md: 6 },
             borderRadius: 6,
-            background: "linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%)",
-            border: "1px solid rgba(99, 102, 241, 0.2)",
+            background: "linear-gradient(135deg, #193b68 0%, #0d213f 100%)",
+            color: "white",
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
             gap: 4,
-            boxShadow: "0 10px 30px -10px rgba(99, 102, 241, 0.3)",
+            boxShadow: "0 20px 40px rgba(25, 59, 104, 0.3)",
             position: "relative",
             overflow: "hidden"
           }}>
           <Box
             sx={{
               position: "absolute",
-              bottom: -40,
-              left: -40,
-              width: 150,
-              height: 150,
+              top: -80,
+              right: -40,
+              width: 250,
+              height: 250,
               borderRadius: "50%",
-              background: "rgba(99, 102, 241, 0.1)",
-              filter: "blur(30px)",
+              background: "rgba(212, 175, 55, 0.15)",
+              filter: "blur(40px)",
             }}
           />
           <Box sx={{ display: "flex", alignItems: "center", gap: 3, flex: 1, position: "relative", zIndex: 2 }}>
             <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
-              <Box sx={{ p: 2, bgcolor: "#4f46e5", color: "white", borderRadius: 4, boxShadow: "0 8px 16px rgba(79, 70, 229, 0.3)" }}>
-                <ShieldCheck size={32} />
-              </Box>
-              <Box sx={{ p: 2, bgcolor: "white", color: "#4f46e5", borderRadius: 4, boxShadow: "0 8px 16px rgba(0, 0, 0, 0.05)", mt: 2 }}>
-                <MessageCircle size={32} />
-              </Box>
+              <Avatar sx={{ width: 64, height: 64, bgcolor: "#D4AF37", boxShadow: "0 10px 20px rgba(212, 175, 55, 0.3)" }}>
+                <ShieldCheck size={32} color="#193b68" />
+              </Avatar>
             </Box>
             <Box>
-              <Typography variant="overline" sx={{ fontWeight: 800, color: "#4f46e5", letterSpacing: 1.5 }}>
+              <Typography variant="overline" sx={{ fontWeight: 800, color: "#D4AF37", letterSpacing: 1.5 }}>
                 LAYANAN TELEKONSELING
               </Typography>
-              <Typography variant="h5" sx={{ fontWeight: 800, color: "#1e293b", mb: 1, mt: 0.5 }}>
+              <Typography variant="h5" sx={{ fontWeight: 800, color: "white", mb: 1, mt: 0.5, fontSize: { xs: '1.4rem', md: '1.8rem' } }}>
                 ViTA: Konseling PMBA & VCT Online
               </Typography>
-              <Typography variant="body1" sx={{ color: "#475569", lineHeight: 1.6 }}>
-                <strong>ViTA (Virtual interaksi & Tele-Asuhan Puskesmas Karang Rejo)</strong> hadir dengan aman, anonim, dan terenkripsi. Dapatkan layanan konsultasi VCT dan gizi balita (PMBA) dengan tenaga kesehatan profesional kami tanpa harus datang ke puskesmas. Privasi Anda adalah prioritas kami.
+              <Typography variant="body1" sx={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.7 }}>
+                <strong>ViTA (Virtual interaksi & Tele-Asuhan)</strong> hadir dengan aman, anonim, dan terenkripsi. Dapatkan layanan konsultasi VCT dan gizi balita (PMBA) dengan tenaga kesehatan profesional kami dari rumah.
               </Typography>
             </Box>
           </Box>
@@ -215,15 +211,17 @@ const Dashboard = () => {
               onClick={() => window.open("https://vita.pkmkarjotarakan.com", "_blank")}
               endIcon={<ArrowRight />}
               sx={{
-                bgcolor: "#4f46e5",
-                color: "white",
-                fontWeight: 700,
-                px: 3,
-                py: 1.5,
-                borderRadius: 8,
+                bgcolor: "#D4AF37",
+                color: "#193b68",
+                fontWeight: 800,
+                px: 4,
+                py: 2,
+                borderRadius: 10,
+                fontSize: "1rem",
                 "&:hover": {
-                  bgcolor: "#4338ca",
-                  transform: "translateX(4px)",
+                  bgcolor: "#facc15",
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 15px 25px rgba(212, 175, 55, 0.4)",
                 },
                 transition: "all 0.3s ease",
               }}>
@@ -233,10 +231,10 @@ const Dashboard = () => {
         </MotionPaper>
       </Container>
 
-      {/* Info & Quick Links Section (Tampilan Jauh Lebih Bersih) */}
-      <Container maxWidth="lg" sx={{ mt: 12, mb: 6 }}>
+      {/* Info & Quick Links Section */}
+      <Container maxWidth="lg" sx={{ mt: 12, mb: 10 }}>
         <Grid container spacing={6} alignItems="center">
-          <Grid item size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -244,20 +242,22 @@ const Dashboard = () => {
               viewport={{ once: true }}>
               <Typography
                 variant="overline"
-                sx={{ fontWeight: 800, color: "#3b82f6", letterSpacing: 1.5 }}>
+                sx={{ fontWeight: 800, color: "#193b68", letterSpacing: 2 }}>
                 Puskesmas Karang Rejo
               </Typography>
               <Typography
-                variant="h5"
+                variant="h4"
                 sx={{
                   fontWeight: 900,
                   mb: 3,
                   color: "#0f172a",
-                  lineHeight: 1.2,
+                  lineHeight: 1.3,
+                  fontSize: { xs: "2rem", md: "2.5rem" }
                 }}>
                 Pusat Pelayanan Kesehatan{" "}
-                <Box component="span" sx={{ color: "#3b82f6" }}>
+                <Box component="span" sx={{ color: "#D4AF37", position: "relative" }}>
                   Terintegrasi & Bermutu
+                  <Box sx={{ position: "absolute", bottom: -2, left: 0, width: "100%", height: "4px", bgcolor: "#D4AF37", borderRadius: 1 }} />
                 </Box>
               </Typography>
               <Typography
@@ -270,59 +270,45 @@ const Dashboard = () => {
                 }}>
                 Mengemban misi pelayanan yang transparan dan responsif, kami menyediakan informasi akurat mengenai program kesehatan dan jadwal kegiatan terbaru. Berlandaskan tata nilai SMART, kami berkomitmen agar pelayanan kami hari ini senantiasa lebih baik dari kemarin.
               </Typography>
-              {/* <Button
-                variant="outlined"
-                endIcon={<ArrowRight />}
-                sx={{
-                  borderRadius: 8,
-                  px: 4,
-                  py: 1.5,
-                  fontWeight: 700,
-                  borderColor: "#3b82f6",
-                  color: "#3b82f6",
-                  "&:hover": { bgcolor: "#eff6ff" },
-                }}>
-                Tentang Kami
-              </Button> */}
             </motion.div>
           </Grid>
 
-          <Grid item size={{ xs: 12, md: 6 }}>
-            <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <Grid container spacing={3}>
               {quickLinks.map((menu, i) => (
-                <Grid item size={{ xs: 6 }} key={i}>
+                <Grid item xs={6} key={i}>
                   <MotionPaper
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.05, y: -4 }}
+                    whileHover={{ scale: 1.05, y: -6 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                     viewport={{ once: true }}
                     onClick={() => navigate(menu.path)}
                     sx={{
                       p: 3,
                       textAlign: "center",
-                      borderRadius: 4,
+                      borderRadius: 5,
                       bgcolor: "white",
-                      color: "#475569",
-                      boxShadow: "0 10px 25px rgba(0,0,0,0.04)",
-                      border: "1px solid rgba(59, 130, 246, 0.08)",
+                      color: "#1e293b",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+                      border: "1px solid rgba(0,0,0,0.03)",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
-                      gap: 1.5,
+                      gap: 2,
                       "&:hover": {
-                        bgcolor: "#3b82f6",
+                        background: "linear-gradient(135deg, #193b68 0%, #112643 100%)",
                         color: "white",
-                        boxShadow: "0 20px 40px rgba(59, 130, 246, 0.25)",
-                        "& .quick-icon": { color: "white" },
+                        boxShadow: "0 20px 40px rgba(25, 59, 104, 0.3)",
+                        "& .quick-icon": { color: "#D4AF37", transform: "scale(1.2)" },
                       },
                     }}>
-                    <Box className="quick-icon" sx={{ color: "#3b82f6", transition: "color 0.3s" }}>
+                    <Box className="quick-icon" sx={{ color: "#193b68", transition: "all 0.3s ease" }}>
                       {menu.icon}
                     </Box>
-                    <Typography variant="subtitle2" sx={{ fontWeight: 700 }}>
+                    <Typography variant="subtitle2" sx={{ fontWeight: 800, fontSize: "0.95rem" }}>
                       {menu.label}
                     </Typography>
                   </MotionPaper>

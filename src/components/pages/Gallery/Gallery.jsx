@@ -138,11 +138,6 @@ const Gallery = () => {
                   : folders.length > 0
                   ? folders.map((folder, fi) => (
                       <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={folder.name}>
-                        <motion.div
-                          initial={{ opacity: 0, y: 24 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.4, delay: fi * 0.08 }}
-                          viewport={{ once: true }}>
                           <Card
                             onClick={() => setSelectedFolder(folder)}
                             sx={{
@@ -165,6 +160,7 @@ const Gallery = () => {
                                   key={pi}
                                   component="img"
                                   src={`${BASE_URL_GALLERY}${photo.nama_file}`}
+                                  loading="lazy"
                                   alt=""
                                   onError={(e) => { e.target.style.display = "none"; }}
                                   sx={{
@@ -184,8 +180,8 @@ const Gallery = () => {
                               sx={{
                                 position: "absolute",
                                 inset: 0,
-                                background: "linear-gradient(to top, rgba(25,59,104,0.85) 0%, rgba(0,0,0,0.1) 60%)",
-                                opacity: 0.7,
+                                background: "linear-gradient(to top, rgba(25,59,104,0.9) 0%, rgba(0,0,0,0.1) 60%)",
+                                opacity: 0.8,
                                 transition: "opacity 0.3s ease",
                               }}
                             />
@@ -201,11 +197,10 @@ const Gallery = () => {
                               <Chip
                                 label={`${folder.count} foto`}
                                 size="small"
-                                sx={{ bgcolor: "rgba(212,175,55,0.25)", color: "#D4AF37", fontWeight: 600, fontSize: "0.72rem", border: "1px solid rgba(212,175,55,0.4)" }}
+                                sx={{ bgcolor: "rgba(212,175,55,0.3)", color: "#facc15", fontWeight: 700, fontSize: "0.72rem", border: "1px solid rgba(212,175,55,0.5)" }}
                               />
                             </Box>
                           </Card>
-                        </motion.div>
                       </Grid>
                     ))
                   : (
@@ -248,11 +243,6 @@ const Gallery = () => {
               <Grid container spacing={2.5}>
                 {folderPhotos.map((photo, index) => (
                   <Grid item size={{ xs: 6, sm: 4, md: 3 }} key={photo.id}>
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      viewport={{ once: true }}>
                       <Card
                         onClick={() => openLightbox(index)}
                         sx={{
@@ -268,11 +258,12 @@ const Gallery = () => {
                             "& .photo-overlay": { opacity: 1 },
                           },
                         }}>
-                        <Box sx={{ height: 200, overflow: "hidden" }}>
+                        <Box sx={{ height: 200, overflow: "hidden", bgcolor: "#f1f5f9" }}>
                           <CardMedia
                             component="img"
                             image={`${BASE_URL_GALLERY}${photo.nama_file}`}
                             alt={photo.judul}
+                            loading="lazy"
                             sx={{
                               height: "100%",
                               objectFit: "cover",
@@ -286,7 +277,7 @@ const Gallery = () => {
                           sx={{
                             position: "absolute",
                             inset: 0,
-                            background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)",
+                            background: "linear-gradient(to top, rgba(25,59,104,0.9) 0%, transparent 70%)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -294,13 +285,12 @@ const Gallery = () => {
                             opacity: 0,
                             transition: "opacity 0.3s ease",
                           }}>
-                          <ZoomInIcon sx={{ color: "white", fontSize: 36, mb: 1 }} />
-                          <Typography sx={{ color: "white", fontSize: "0.75rem", fontWeight: 600, textAlign: "center", px: 1 }}>
+                          <ZoomInIcon sx={{ color: "white", fontSize: 40, mb: 1 }} />
+                          <Typography sx={{ color: "white", fontSize: "0.8rem", fontWeight: 700, textAlign: "center", px: 1 }}>
                             {photo.judul}
                           </Typography>
                         </Box>
                       </Card>
-                    </motion.div>
                   </Grid>
                 ))}
               </Grid>

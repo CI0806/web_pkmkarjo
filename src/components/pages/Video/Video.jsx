@@ -68,17 +68,20 @@ const Video = () => {
           ) : currentData.length > 0 ? (
             currentData.map((video, index) => (
               <Grid item size={{xs:12, md:6}} key={video.id}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}>
                   <Paper
                     elevation={0}
                     sx={{
-                      p: 2,
+                      p: 2.5,
                       borderRadius: 4,
                       bgcolor: "white",
-                      border: "1px solid #e2e8f0",
+                      border: "1px solid rgba(0,0,0,0.04)",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-6px)",
+                        boxShadow: "0 20px 40px rgba(25, 59, 104, 0.15)",
+                        borderColor: "rgba(25, 59, 104, 0.2)"
+                      }
                     }}>
                     <Box
                       sx={{
@@ -86,8 +89,8 @@ const Video = () => {
                         paddingTop: "56.25%",
                         borderRadius: 3,
                         overflow: "hidden",
-                        bgcolor: "black",
-                        mb: 2,
+                        bgcolor: "#f1f5f9",
+                        mb: 2.5,
                       }}>
                       <iframe
                         style={{
@@ -98,7 +101,7 @@ const Video = () => {
                           height: "100%",
                           border: 0,
                         }}
-                        // Perhatikan perubahan nama properti: video.url_video
+                        loading="lazy"
                         src={`https://www.youtube.com/embed/${video.url_video}?autoplay=0`}
                         title={video.judul}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -108,16 +111,14 @@ const Video = () => {
                     <Box sx={{ px: 1 }}>
                       <Typography
                         variant="h6"
-                        sx={{ fontWeight: 800, color: "#1e293b" }}>
+                        sx={{ fontWeight: 800, color: "#193b68", mb: 0.5 }}>
                         {video.judul}
                       </Typography>
-                      <Typography variant="caption" color="text.secondary">
-                        Diunggah pada:{" "}
-                        {new Date(video.created_at).toLocaleDateString("id-ID")}
+                      <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 500 }}>
+                        Diunggah pada: {new Date(video.created_at).toLocaleDateString("id-ID", { day: 'numeric', month: 'long', year: 'numeric' })}
                       </Typography>
                     </Box>
                   </Paper>
-                </motion.div>
               </Grid>
             ))
           ) : (

@@ -77,9 +77,9 @@ const HasilSurvei = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key="survei"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}>
             
             <Grid container spacing={3}>
@@ -93,65 +93,61 @@ const HasilSurvei = () => {
                 : data.length > 0
                 ? data.map((item, index) => (
                     <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }}
-                        viewport={{ once: true }}>
-                        <Card
-                          onClick={() => openLightbox(index)}
-                          sx={{
-                            borderRadius: 4,
-                            overflow: "hidden",
-                            cursor: "pointer",
-                            position: "relative",
-                            boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-                            transition: "all 0.3s ease",
-                            "&:hover": {
-                              transform: "translateY(-6px)",
-                              boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
-                              "& .photo-overlay": { opacity: 1 },
-                            },
-                          }}>
-                          <Box sx={{ height: 260, overflow: "hidden" }}>
-                            <CardMedia
-                              component="img"
-                              image={`${BASE_URL}${item.nama_file}`}
-                              alt={item.judul}
-                              sx={{
-                                height: "100%",
-                                objectFit: "cover",
-                                transition: "transform 0.5s ease",
-                                ".MuiCard-root:hover &": { transform: "scale(1.08)" },
-                              }}
-                            />
-                          </Box>
-                          <Box
-                            className="photo-overlay"
+                      <Card
+                        onClick={() => openLightbox(index)}
+                        sx={{
+                          borderRadius: 4,
+                          overflow: "hidden",
+                          cursor: "pointer",
+                          position: "relative",
+                          boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
+                          border: "1px solid rgba(0,0,0,0.05)",
+                          transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                          "&:hover": {
+                            transform: "translateY(-6px)",
+                            boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
+                            "& .photo-overlay": { opacity: 1 },
+                          },
+                        }}>
+                        <Box sx={{ height: 260, overflow: "hidden", bgcolor: "#f1f5f9" }}>
+                          <CardMedia
+                            component="img"
+                            image={`${BASE_URL}${item.nama_file}`}
+                            alt={item.judul}
+                            loading="lazy"
                             sx={{
-                              position: "absolute",
-                              inset: 0,
-                              background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              flexDirection: "column",
-                              opacity: 0,
-                              transition: "opacity 0.3s ease",
-                            }}>
-                            <ZoomInIcon sx={{ color: "white", fontSize: 36, mb: 1 }} />
-                          </Box>
-                          <Box sx={{ p: 2, bgcolor: "white" }}>
-                            <Typography sx={{ fontWeight: 700, color: "#193b68", fontSize: "0.95rem" }}>
-                              {item.judul}
-                            </Typography>
-                          </Box>
-                        </Card>
-                      </motion.div>
+                              height: "100%",
+                              objectFit: "cover",
+                              transition: "transform 0.5s ease",
+                              ".MuiCard-root:hover &": { transform: "scale(1.08)" },
+                            }}
+                          />
+                        </Box>
+                        <Box
+                          className="photo-overlay"
+                          sx={{
+                            position: "absolute",
+                            inset: 0,
+                            background: "linear-gradient(to top, rgba(25, 59, 104, 0.8) 0%, rgba(25, 59, 104, 0.2) 100%)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                            opacity: 0,
+                            transition: "opacity 0.3s ease",
+                          }}>
+                          <ZoomInIcon sx={{ color: "white", fontSize: 40, mb: 1 }} />
+                        </Box>
+                        <Box sx={{ p: 2, bgcolor: "white" }}>
+                          <Typography sx={{ fontWeight: 700, color: "#193b68", fontSize: "0.95rem", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                            {item.judul}
+                          </Typography>
+                        </Box>
+                      </Card>
                     </Grid>
                   ))
                 : (
-                  <Grid item size={{ xs: 12 }}>
+                  <Grid item xs={12}>
                     <Box sx={{ textAlign: "center", py: 10 }}>
                       <Typography color="text.secondary">Belum ada data Hasil Survei.</Typography>
                     </Box>
