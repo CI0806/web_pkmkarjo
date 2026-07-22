@@ -35,7 +35,7 @@ const HakKewajiban = () => {
           {/* Hak Pasien */}
           <Grid item size={{xs:12, md:6}}>
             <Paper elevation={3} sx={{ p: 4, height: "100%", borderRadius: "16px" }}>
-              <Box sx={{ display: "flex", alignItems: "center", mb: 3, color: "#134e4a" }}>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 3, color: "#1e3a8a" }}>
                 <CheckCircleIcon sx={{ fontSize: 30, mr: 1 }} />
                 <Typography variant="h5" fontWeight="bold">Hak Pasien</Typography>
               </Box>

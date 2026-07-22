@@ -37,8 +37,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const gold = "#10b981";
-  const navy = "#0d9488";
+  const gold = "#D4AF37";
+  const navy = "#193b68";
 
   const isMenuActive = (menu) => {
     if (menu === "Beranda") return location.pathname === "/";
@@ -157,11 +157,11 @@ const Navbar = () => {
           borderRadius: "0 !important",
           transition: "all 0.4s ease",
           background: isScrolled
-            ? "rgba(13, 148, 136, 0.97)"
+            ? "rgba(25, 59, 104, 0.97)"
             : "transparent",
           backdropFilter: isScrolled ? "blur(20px)" : "none",
           border: "none",
-          borderBottom: isScrolled ? "1px solid rgba(16, 185, 129,0.25)" : "none",
+          borderBottom: isScrolled ? "1px solid rgba(212,175,55,0.25)" : "none",
           boxShadow: isScrolled ? "0 4px 24px rgba(0,0,0,0.3)" : "none",
           color: "#ffffff",
         }}>
@@ -174,7 +174,7 @@ const Navbar = () => {
             <IconButton
               color="inherit"
               onClick={handleDrawerToggle}
-              sx={{ mr: 1, display: { md: "none" }, "&:hover": { bgcolor: "rgba(16, 185, 129,0.15)" } }}>
+              sx={{ mr: 1, display: { md: "none" }, "&:hover": { bgcolor: "rgba(212,175,55,0.15)" } }}>
               <MenuIcon size={22} />
             </IconButton>
 
@@ -243,7 +243,7 @@ const Navbar = () => {
                       transition: "all 0.25s ease",
                       bgcolor: active ? gold : "transparent",
                       border: `1px solid ${active ? gold : "transparent"}`,
-                      boxShadow: active ? "0 4px 12px rgba(16, 185, 129,0.35)" : "none",
+                      boxShadow: active ? "0 4px 12px rgba(212,175,55,0.35)" : "none",
                       "&:hover": {
                         bgcolor: active ? "#c5a028" : "rgba(255,255,255,0.1)",
                         color: active ? navy : "white",
@@ -270,8 +270,8 @@ const Navbar = () => {
               sx={{
                 display: { xs: "none", md: "flex" },
                 color: gold,
-                bgcolor: "rgba(16, 185, 129,0.1)",
-                border: `1px solid rgba(16, 185, 129,0.35)`,
+                bgcolor: "rgba(212,175,55,0.1)",
+                border: `1px solid rgba(212,175,55,0.35)`,
                 borderRadius: "30px",
                 px: 2,
                 py: 0.8,
@@ -285,7 +285,7 @@ const Navbar = () => {
                   color: navy,
                   border: `1px solid ${gold}`,
                   transform: "translateY(-1px)",
-                  boxShadow: "0 4px 12px rgba(16, 185, 129,0.4)",
+                  boxShadow: "0 4px 12px rgba(212,175,55,0.4)",
                 },
               }}>
               Cari
@@ -295,7 +295,7 @@ const Navbar = () => {
               sx={{
                 display: { xs: "flex", md: "none" },
                 color: gold,
-                "&:hover": { bgcolor: "rgba(16, 185, 129,0.15)" },
+                "&:hover": { bgcolor: "rgba(212,175,55,0.15)" },
               }}>
               <Search size={20} />
             </IconButton>
@@ -314,7 +314,7 @@ const Navbar = () => {
                   borderRadius: 3,
                   overflow: "hidden",
                   minWidth: 230,
-                  boxShadow: "0 16px 48px rgba(0,0,0,0.18), 0 0 0 1px rgba(16, 185, 129,0.15)",
+                  boxShadow: "0 16px 48px rgba(0,0,0,0.18), 0 0 0 1px rgba(212,175,55,0.15)",
                   border: "none",
                 }}>
                 {/* Dropdown Header */}
@@ -344,7 +344,7 @@ const Navbar = () => {
                           transition: "all 0.18s ease",
                           borderLeft: "3px solid transparent",
                           "&:hover": {
-                            bgcolor: "rgba(13, 148, 136,0.06)",
+                            bgcolor: "rgba(25,59,104,0.06)",
                             borderLeftColor: gold,
                             pl: 3,
                           },
@@ -420,7 +420,7 @@ const Navbar = () => {
             sx={{
               px: 3,
               py: 1.5,
-              "&:hover": { bgcolor: "rgba(16, 185, 129,0.1)" },
+              "&:hover": { bgcolor: "rgba(212,175,55,0.1)" },
               borderLeft: location.pathname === "/" ? `3px solid ${gold}` : "3px solid transparent",
             }}>
             <ListItemText
@@ -446,7 +446,7 @@ const Navbar = () => {
                     px: 3,
                     py: 1.2,
                     borderLeft: isActive ? `3px solid ${gold}` : "3px solid transparent",
-                    "&:hover": { bgcolor: "rgba(16, 185, 129,0.08)" },
+                    "&:hover": { bgcolor: "rgba(212,175,55,0.08)" },
                   }}>
                   <ListItemText
                     primary={menu}
@@ -468,7 +468,7 @@ const Navbar = () => {
                   />
                 </ListItemButton>
                 {isExpanded && (
-                  <Box sx={{ bgcolor: "rgba(0,0,0,0.2)", borderLeft: `3px solid rgba(16, 185, 129,0.3)`, ml: 3 }}>
+                  <Box sx={{ bgcolor: "rgba(0,0,0,0.2)", borderLeft: `3px solid rgba(212,175,55,0.3)`, ml: 3 }}>
                     {menuData[menu].map((item) => (
                       <ListItemButton
                         key={item.label}
@@ -476,7 +476,7 @@ const Navbar = () => {
                           item.isExternal ? window.open(item.path, "_blank") : navigate(item.path);
                           handleDrawerToggle();
                         }}
-                        sx={{ px: 3, py: 1, "&:hover": { bgcolor: "rgba(16, 185, 129,0.1)" } }}>
+                        sx={{ px: 3, py: 1, "&:hover": { bgcolor: "rgba(212,175,55,0.1)" } }}>
                         <ListItemText
                           primary={item.label}
                           sx={{
@@ -504,13 +504,13 @@ const Navbar = () => {
             startIcon={<Search size={15} />}
             onClick={() => { handleDrawerToggle(); handleSearchOpen(); }}
             sx={{
-              bgcolor: "rgba(16, 185, 129,0.15)",
+              bgcolor: "rgba(212,175,55,0.15)",
               color: gold,
-              border: `1px solid rgba(16, 185, 129,0.3)`,
+              border: `1px solid rgba(212,175,55,0.3)`,
               borderRadius: "12px",
               textTransform: "none",
               fontWeight: 600,
-              "&:hover": { bgcolor: "rgba(16, 185, 129,0.25)" },
+              "&:hover": { bgcolor: "rgba(212,175,55,0.25)" },
             }}>
             Cari Informasi
           </Button>

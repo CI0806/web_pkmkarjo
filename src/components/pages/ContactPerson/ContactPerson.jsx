@@ -28,13 +28,13 @@ const ContactPerson = () => {
       title: "Email",
       info: "pkmkarjotarakan@email.com",
       icon: <EmailIcon fontSize="large" />,
-      color: "#10b981",
+      color: "#D4AF37",
     },
     {
       title: "Alamat",
       info: "Jl. R.A. Kartini RT. 12 Nomor 40 Tarakan",
       icon: <LocationOnIcon fontSize="large" />,
-      color: "#0d9488",
+      color: "#193b68",
     },
   ];
 
@@ -119,8 +119,8 @@ const ContactPerson = () => {
               boxShadow: "0 20px 50px rgba(0,0,0,0.05)",
               border: "1px solid rgba(0,0,0,0.04)"
             }}>
-            <Typography variant="h5" fontWeight="800" color="#0d9488" sx={{ mb: 3, px: 2, display: "flex", alignItems: "center", gap: 1.5 }}>
-              <Box sx={{ width: 6, height: 24, bgcolor: "#10b981", borderRadius: 10 }} />
+            <Typography variant="h5" fontWeight="800" color="#193b68" sx={{ mb: 3, px: 2, display: "flex", alignItems: "center", gap: 1.5 }}>
+              <Box sx={{ width: 6, height: 24, bgcolor: "#D4AF37", borderRadius: 10 }} />
               Lokasi Puskesmas
             </Typography>
             <Box

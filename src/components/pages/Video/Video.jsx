@@ -79,8 +79,8 @@ const Video = () => {
                       transition: "all 0.3s ease",
                       "&:hover": {
                         transform: "translateY(-6px)",
-                        boxShadow: "0 20px 40px rgba(13, 148, 136, 0.15)",
-                        borderColor: "rgba(13, 148, 136, 0.2)"
+                        boxShadow: "0 20px 40px rgba(25, 59, 104, 0.15)",
+                        borderColor: "rgba(25, 59, 104, 0.2)"
                       }
                     }}>
                     <Box
@@ -111,7 +111,7 @@ const Video = () => {
                     <Box sx={{ px: 1 }}>
                       <Typography
                         variant="h6"
-                        sx={{ fontWeight: 800, color: "#0d9488", mb: 0.5 }}>
+                        sx={{ fontWeight: 800, color: "#193b68", mb: 0.5 }}>
                         {video.judul}
                       </Typography>
                       <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 500 }}>

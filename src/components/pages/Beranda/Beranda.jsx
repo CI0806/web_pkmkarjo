@@ -26,14 +26,14 @@ const Dashboard = () => {
       title: "Jadwal Pelayanan",
       desc: "Informasi mengenai jadwal layanan poli di Puskesmas Karang Rejo.",
       path: "/jadwal",
-      color: "#0d9488"
+      color: "#193b68"
     },
     {
       icon: <Users size={32} />,
       title: "Pimpinan Puskesmas",
       desc: "Mengenal lebih dekat struktur kepemimpinan Puskesmas Karang rejo.",
       path: "/pimpinan",
-      color: "#10b981"
+      color: "#D4AF37"
     },
     {
       icon: <AlertCircle size={32} />,
@@ -163,14 +163,14 @@ const Dashboard = () => {
           sx={{
             p: { xs: 4, md: 6 },
             borderRadius: 6,
-            background: "linear-gradient(135deg, #0d9488 0%, #0d213f 100%)",
+            background: "linear-gradient(135deg, #193b68 0%, #0d213f 100%)",
             color: "white",
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
             gap: 4,
-            boxShadow: "0 20px 40px rgba(13, 148, 136, 0.3)",
+            boxShadow: "0 20px 40px rgba(25, 59, 104, 0.3)",
             position: "relative",
             overflow: "hidden"
           }}>
@@ -182,18 +182,18 @@ const Dashboard = () => {
               width: 250,
               height: 250,
               borderRadius: "50%",
-              background: "rgba(16, 185, 129, 0.15)",
+              background: "rgba(212, 175, 55, 0.15)",
               filter: "blur(40px)",
             }}
           />
           <Box sx={{ display: "flex", alignItems: "center", gap: 3, flex: 1, position: "relative", zIndex: 2 }}>
             <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
-              <Avatar sx={{ width: 64, height: 64, bgcolor: "#10b981", boxShadow: "0 10px 20px rgba(16, 185, 129, 0.3)" }}>
-                <ShieldCheck size={32} color="#0d9488" />
+              <Avatar sx={{ width: 64, height: 64, bgcolor: "#D4AF37", boxShadow: "0 10px 20px rgba(212, 175, 55, 0.3)" }}>
+                <ShieldCheck size={32} color="#193b68" />
               </Avatar>
             </Box>
             <Box>
-              <Typography variant="overline" sx={{ fontWeight: 800, color: "#10b981", letterSpacing: 1.5 }}>
+              <Typography variant="overline" sx={{ fontWeight: 800, color: "#D4AF37", letterSpacing: 1.5 }}>
                 LAYANAN TELEKONSELING
               </Typography>
               <Typography variant="h5" sx={{ fontWeight: 800, color: "white", mb: 1, mt: 0.5, fontSize: { xs: '1.4rem', md: '1.8rem' } }}>
@@ -211,8 +211,8 @@ const Dashboard = () => {
               onClick={() => window.open("https://vita.pkmkarjotarakan.com", "_blank")}
               endIcon={<ArrowRight />}
               sx={{
-                bgcolor: "#10b981",
-                color: "#0d9488",
+                bgcolor: "#D4AF37",
+                color: "#193b68",
                 fontWeight: 800,
                 px: 4,
                 py: 2,
@@ -221,7 +221,7 @@ const Dashboard = () => {
                 "&:hover": {
                   bgcolor: "#facc15",
                   transform: "translateY(-3px)",
-                  boxShadow: "0 15px 25px rgba(16, 185, 129, 0.4)",
+                  boxShadow: "0 15px 25px rgba(212, 175, 55, 0.4)",
                 },
                 transition: "all 0.3s ease",
               }}>
@@ -242,7 +242,7 @@ const Dashboard = () => {
               viewport={{ once: true }}>
               <Typography
                 variant="overline"
-                sx={{ fontWeight: 800, color: "#0d9488", letterSpacing: 2 }}>
+                sx={{ fontWeight: 800, color: "#193b68", letterSpacing: 2 }}>
                 Puskesmas Karang Rejo
               </Typography>
               <Typography
@@ -255,9 +255,9 @@ const Dashboard = () => {
                   fontSize: { xs: "2rem", md: "2.5rem" }
                 }}>
                 Pusat Pelayanan Kesehatan{" "}
-                <Box component="span" sx={{ color: "#10b981", position: "relative" }}>
+                <Box component="span" sx={{ color: "#D4AF37", position: "relative" }}>
                   Terintegrasi & Bermutu
-                  <Box sx={{ position: "absolute", bottom: -2, left: 0, width: "100%", height: "4px", bgcolor: "#10b981", borderRadius: 1 }} />
+                  <Box sx={{ position: "absolute", bottom: -2, left: 0, width: "100%", height: "4px", bgcolor: "#D4AF37", borderRadius: 1 }} />
                 </Box>
               </Typography>
               <Typography
@@ -299,13 +299,13 @@ const Dashboard = () => {
                       alignItems: "center",
                       gap: 2,
                       "&:hover": {
-                        background: "linear-gradient(135deg, #0d9488 0%, #115e59 100%)",
+                        background: "linear-gradient(135deg, #193b68 0%, #112643 100%)",
                         color: "white",
-                        boxShadow: "0 20px 40px rgba(13, 148, 136, 0.3)",
-                        "& .quick-icon": { color: "#10b981", transform: "scale(1.2)" },
+                        boxShadow: "0 20px 40px rgba(25, 59, 104, 0.3)",
+                        "& .quick-icon": { color: "#D4AF37", transform: "scale(1.2)" },
                       },
                     }}>
-                    <Box className="quick-icon" sx={{ color: "#0d9488", transition: "all 0.3s ease" }}>
+                    <Box className="quick-icon" sx={{ color: "#193b68", transition: "all 0.3s ease" }}>
                       {menu.icon}
                     </Box>
                     <Typography variant="subtitle2" sx={{ fontWeight: 800, fontSize: "0.95rem" }}>

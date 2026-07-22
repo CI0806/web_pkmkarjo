@@ -63,9 +63,9 @@ const MainLayout = () => {
             position: "fixed",
             bottom: 32,
             right: 32,
-            bgcolor: "#0d9488",
-            color: "#10b981",
-            boxShadow: "0 8px 24px rgba(13, 148, 136,0.4)",
+            bgcolor: "#193b68",
+            color: "#D4AF37",
+            boxShadow: "0 8px 24px rgba(25,59,104,0.4)",
             "&:hover": { bgcolor: "#254b7d" },
             zIndex: 1300,
           }}

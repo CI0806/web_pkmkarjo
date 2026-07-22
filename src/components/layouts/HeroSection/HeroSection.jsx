@@ -31,8 +31,8 @@ const HeroSection = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const gold = "#10b981";
-  const navy = "#0d9488";
+  const gold = "#D4AF37";
+  const navy = "#193b68";
 
   // Efek untuk mengganti gambar setiap 5 detik
   useEffect(() => {
@@ -83,7 +83,7 @@ const HeroSection = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          background: `linear-gradient(to bottom, rgba(13, 148, 136, 0.6), ${navy})`,
+          background: `linear-gradient(to bottom, rgba(25, 59, 104, 0.6), ${navy})`,
           zIndex: 1,
         }}
       />
@@ -141,7 +141,7 @@ const HeroSection = () => {
               textTransform: "none",
               fontSize: "1rem",
               fontWeight: 700,
-              boxShadow: "0 10px 25px rgba(16, 185, 129, 0.3)",
+              boxShadow: "0 10px 25px rgba(212, 175, 55, 0.3)",
               transition: "all 0.3s ease",
               "&:hover": { bgcolor: "#c5a028", transform: "translateY(-4px)" },
             }}>
@@ -164,7 +164,7 @@ const HeroSection = () => {
               fontSize: "1rem",
               fontWeight: 500,
               "&:hover": {
-                bgcolor: "rgba(16, 185, 129, 0.2)",
+                bgcolor: "rgba(212, 175, 55, 0.2)",
                 borderColor: gold,
               },
             }}>

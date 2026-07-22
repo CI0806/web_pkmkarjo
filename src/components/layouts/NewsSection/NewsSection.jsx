@@ -17,7 +17,7 @@ import services from "@/services";
 import { useNavigate } from "react-router-dom";
 
 const categoryColor = {
-  artikel: { bg: "#f0fdfa", color: "#0d9488" },
+  artikel: { bg: "#eff6ff", color: "#2563eb" },
   berita: { bg: "#f0fdf4", color: "#16a34a" },
   pengumuman: { bg: "#fffbeb", color: "#d97706" },
 };
@@ -76,7 +76,7 @@ const NewsSection = () => {
           <Box>
             <Typography
               variant="overline"
-              sx={{ color: "#0d9488", fontWeight: 800, letterSpacing: 1.5 }}
+              sx={{ color: "#2563eb", fontWeight: 800, letterSpacing: 1.5 }}
             >
               Informasi Terkini
             </Typography>
@@ -240,9 +240,9 @@ const NewsSection = () => {
                             p: 0,
                             fontWeight: 700,
                             textTransform: "none",
-                            color: "#0d9488",
+                            color: "#2563eb",
                             fontSize: "0.85rem",
-                            "&:hover": { color: "#0f766e" },
+                            "&:hover": { color: "#1d4ed8" },
                           }}
                         >
                           Baca Selengkapnya
@@ -266,9 +266,9 @@ const NewsSection = () => {
               borderRadius: 50,
               fontWeight: 700,
               textTransform: "none",
-              borderColor: "#0d9488",
-              color: "#0d9488",
-              "&:hover": { borderColor: "#0f766e", bgcolor: "#f0fdfa" },
+              borderColor: "#2563eb",
+              color: "#2563eb",
+              "&:hover": { borderColor: "#1d4ed8", bgcolor: "#eff6ff" },
             }}
           >
             Lihat Semua Berita

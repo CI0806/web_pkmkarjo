@@ -66,7 +66,7 @@ const Pengaduan = () => {
       icon: <EditNoteIcon fontSize="large" />,
       title: "1. Isi Formulir",
       desc: "Tuliskan keluhan atau masukan Anda dengan jelas beserta identitas diri.",
-      color: "#14b8a6" // blue
+      color: "#3b82f6" // blue
     },
     {
       icon: <FactCheckIcon fontSize="large" />,
@@ -104,10 +104,10 @@ const Pengaduan = () => {
             sx={{
               p: { xs: 3, md: 5 },
               borderRadius: "24px",
-              background: "linear-gradient(135deg, #0d9488 0%, #115e59 100%)",
+              background: "linear-gradient(135deg, #193b68 0%, #112643 100%)",
               color: "white",
               mb: 6,
-              boxShadow: "0 20px 40px rgba(13, 148, 136, 0.15)",
+              boxShadow: "0 20px 40px rgba(25, 59, 104, 0.15)",
               display: "flex",
               alignItems: "center",
               overflow: "hidden",
@@ -116,12 +116,12 @@ const Pengaduan = () => {
           >
             {/* Dekorasi Background */}
             <Box sx={{ position: "absolute", top: -50, right: -50, width: 250, height: 250, bgcolor: "rgba(255,255,255,0.05)", borderRadius: "50%" }} />
-            <Box sx={{ position: "absolute", bottom: -80, right: 100, width: 150, height: 150, bgcolor: "rgba(16, 185, 129,0.1)", borderRadius: "50%" }} />
+            <Box sx={{ position: "absolute", bottom: -80, right: 100, width: 150, height: 150, bgcolor: "rgba(212,175,55,0.1)", borderRadius: "50%" }} />
 
             <Grid container spacing={4} alignItems="center">
               <Grid item size={{ xs: 12, md: 8 }} sx={{ position: "relative", zIndex: 1 }}>
                 <Typography variant="h4" fontWeight="800" gutterBottom sx={{ fontSize: { xs: '1.8rem', md: '2.5rem' }, textShadow: "0 2px 10px rgba(0,0,0,0.2)" }}>
-                  Kami Siap <span style={{ color: "#10b981" }}>Mendengar</span> Anda!
+                  Kami Siap <span style={{ color: "#D4AF37" }}>Mendengar</span> Anda!
                 </Typography>
                 <Typography variant="body1" sx={{ color: "rgba(255,255,255,0.8)", fontSize: "1.1rem", lineHeight: 1.7, maxWidth: 600 }}>
                   Setiap keluhan dan masukan yang Anda berikan adalah kunci bagi kami untuk terus mengevaluasi dan meningkatkan mutu pelayanan di Puskesmas Karang Rejo.
@@ -129,7 +129,7 @@ const Pengaduan = () => {
               </Grid>
               <Grid item size={{ xs: 12, md: 4 }} sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center", position: "relative", zIndex: 1 }}>
                 <Avatar sx={{ width: 120, height: 120, bgcolor: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)" }}>
-                  <SupportAgentIcon sx={{ fontSize: 60, color: "#10b981" }} />
+                  <SupportAgentIcon sx={{ fontSize: 60, color: "#D4AF37" }} />
                 </Avatar>
               </Grid>
             </Grid>
@@ -139,8 +139,8 @@ const Pengaduan = () => {
         <Grid container spacing={5}>
           {/* Kolom Kiri: Prosedur */}
           <Grid item size={{ xs: 12, lg: 4 }}>
-            <Typography variant="h5" fontWeight="800" color="#0d9488" gutterBottom sx={{ mb: 4, display: "flex", alignItems: "center", gap: 1.5 }}>
-              <Box sx={{ width: 6, height: 24, bgcolor: "#10b981", borderRadius: 10 }} />
+            <Typography variant="h5" fontWeight="800" color="#193b68" gutterBottom sx={{ mb: 4, display: "flex", alignItems: "center", gap: 1.5 }}>
+              <Box sx={{ width: 6, height: 24, bgcolor: "#D4AF37", borderRadius: 10 }} />
               Alur Penanganan
             </Typography>
 
@@ -191,7 +191,7 @@ const Pengaduan = () => {
                   bgcolor: "white"
                 }}
               >
-                <Typography variant="h5" fontWeight="800" color="#0d9488" gutterBottom sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 1 }}>
+                <Typography variant="h5" fontWeight="800" color="#193b68" gutterBottom sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 1 }}>
                   Tulis Laporan
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
@@ -279,12 +279,12 @@ const Pengaduan = () => {
                           textTransform: "none",
                           fontSize: "1.1rem",
                           fontWeight: "bold",
-                          bgcolor: "#0d9488",
-                          boxShadow: "0 10px 20px rgba(13, 148, 136, 0.2)",
+                          bgcolor: "#193b68",
+                          boxShadow: "0 10px 20px rgba(25, 59, 104, 0.2)",
                           "&:hover": {
-                            bgcolor: "#115e59",
+                            bgcolor: "#112643",
                             transform: "translateY(-2px)",
-                            boxShadow: "0 15px 25px rgba(13, 148, 136, 0.3)",
+                            boxShadow: "0 15px 25px rgba(25, 59, 104, 0.3)",
                           },
                           transition: "all 0.3s ease"
                         }}

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
 const PageHeader = ({ title, description, children }) => {
-  const gold = "rgba(16, 185, 129, 0.2)"; // Emas transparan untuk dekorasi
-  const navy = "#0d9488";
+  const gold = "rgba(212, 175, 55, 0.2)"; // Emas transparan untuk dekorasi
+  const navy = "#193b68";
   const decorations = [
     { top: "10%", left: "5%", size: 200, duration: 20, delay: 0 },
     { top: "40%", right: "5%", size: 150, duration: 25, delay: 2 },

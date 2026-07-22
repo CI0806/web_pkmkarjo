@@ -21,7 +21,7 @@ import logoUrl from "@/assets/img/logoaja.png";
 
 const Footer = () => {
   // Warna Emas Mewah
-  const goldColor = "#10b981";
+  const goldColor = "#D4AF37";
   const [totalKunjungan, setTotalKunjungan] = useState(0);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        bgcolor: "#0d9488",
+        bgcolor: "#193b68",
         color: "#cbd5e1",
         py: 6,
         mt: "auto",
@@ -183,7 +183,7 @@ const Footer = () => {
                     backgroundColor: "rgba(255,255,255,0.1)",
                     "&:hover": {
                       backgroundColor: goldColor,
-                      color: "#0d9488",
+                      color: "#193b68",
                     },
                   }}>
                   <item.icon fontSize="small" />
@@ -200,7 +200,7 @@ const Footer = () => {
                 bgcolor: "rgba(255,255,255,0.05)",
                 p: 1.5,
                 borderRadius: "12px",
-                border: "1px solid rgba(16, 185, 129, 0.2)",
+                border: "1px solid rgba(212, 175, 55, 0.2)",
               }}>
               <Eye size={20} color={goldColor} />
               <Box sx={{ textAlign: "left" }}>
@@ -223,7 +223,7 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 4, borderColor: "rgba(16, 185, 129, 0.2)" }} />
+        <Divider sx={{ my: 4, borderColor: "rgba(212, 175, 55, 0.2)" }} />
 
         <Typography
           variant="caption"

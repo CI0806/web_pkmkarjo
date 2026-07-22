@@ -42,7 +42,7 @@ const JadwalPelayanan = () => {
           >
             <Box 
               sx={{ 
-                background: "linear-gradient(135deg, #0d9488 0%, #115e59 100%)", 
+                background: "linear-gradient(135deg, #193b68 0%, #112643 100%)", 
                 p: { xs: 3, md: 4 }, 
                 display: "flex", 
                 alignItems: "center", 
@@ -52,11 +52,11 @@ const JadwalPelayanan = () => {
               }}
             >
               <Box sx={{ position: "absolute", top: -20, right: -20, width: 100, height: 100, bgcolor: "rgba(255,255,255,0.05)", borderRadius: "50%" }} />
-              <Avatar sx={{ bgcolor: "#10b981", width: 56, height: 56, mr: 3, boxShadow: "0 10px 20px rgba(0,0,0,0.2)" }}>
-                <LocalHospitalIcon sx={{ color: "#0d9488", fontSize: 32 }} />
+              <Avatar sx={{ bgcolor: "#D4AF37", width: 56, height: 56, mr: 3, boxShadow: "0 10px 20px rgba(0,0,0,0.2)" }}>
+                <LocalHospitalIcon sx={{ color: "#193b68", fontSize: 32 }} />
               </Avatar>
               <Box>
-                <Typography variant="overline" sx={{ color: "#10b981", fontWeight: 700, letterSpacing: 1.5 }}>UNIT PELAYANAN</Typography>
+                <Typography variant="overline" sx={{ color: "#D4AF37", fontWeight: 700, letterSpacing: 1.5 }}>UNIT PELAYANAN</Typography>
                 <Typography variant="h5" fontWeight="800">Jadwal Pelayanan Loket (WITA)</Typography>
               </Box>
             </Box>
