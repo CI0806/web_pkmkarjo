@@ -33,13 +33,13 @@ const Pimpinan = () => {
           sx={{ 
             borderRadius: "32px",
             border: "1px solid rgba(0,0,0,0.04)",
-            boxShadow: "0 25px 50px -12px rgba(25, 59, 104, 0.15)",
+            boxShadow: "0 25px 50px -12px rgba(13, 148, 136, 0.15)",
             overflow: "hidden",
             bgcolor: "white"
           }}
         >
           {/* Top Banner (Royal Blue gradient) */}
-          <Box sx={{ height: 160, background: "linear-gradient(135deg, #193b68 0%, #112643 100%)", position: "relative" }}>
+          <Box sx={{ height: 160, background: "linear-gradient(135deg, #0d9488 0%, #115e59 100%)", position: "relative" }}>
              <Box sx={{ position: "absolute", top: -50, right: -20, width: 200, height: 200, bgcolor: "rgba(255,255,255,0.03)", borderRadius: "50%" }} />
           </Box>
 
@@ -65,12 +65,12 @@ const Pimpinan = () => {
                 {/* Badge Jabatan */}
                 <Box 
                   sx={{ 
-                    bgcolor: "rgba(212,175,55,0.15)", 
-                    color: "#b48c1e", 
+                    bgcolor: "rgba(16, 185, 129,0.15)", 
+                    color: "#059669", 
                     px: 3, 
                     py: 1, 
                     borderRadius: 8,
-                    border: "1px solid rgba(212,175,55,0.3)"
+                    border: "1px solid rgba(16, 185, 129,0.3)"
                   }}
                 >
                   <Typography variant="subtitle2" fontWeight="700" letterSpacing={1}>
@@ -81,11 +81,11 @@ const Pimpinan = () => {
 
               {/* Biodata Singkat */}
               <Grid item size={{xs:12, md:8}} sx={{ pt: { xs: 3, md: 16 } }}>
-                <Typography variant="h3" fontWeight="900" color="#193b68" gutterBottom sx={{ fontSize: { xs: '2rem', md: '2.5rem' } }}>
+                <Typography variant="h3" fontWeight="900" color="#0d9488" gutterBottom sx={{ fontSize: { xs: '2rem', md: '2.5rem' } }}>
                   {pimpinan.nama}
                 </Typography>
                 <Typography variant="body1" color="text.secondary" fontWeight="600" sx={{ mt: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <Box component="span" sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#D4AF37' }} />
+                  <Box component="span" sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#10b981' }} />
                   Pendidikan: {pimpinan.pendidikan}
                 </Typography>
               </Grid>
@@ -100,7 +100,7 @@ const Pimpinan = () => {
               </Typography>
               
               <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.9, fontSize: '1.05rem', textAlign: 'justify' }}>
-                <span style={{ fontSize: '2.5rem', color: '#193b68', float: 'left', lineHeight: 0.8, marginRight: '8px', marginTop: '8px' }}>S</span>
+                <span style={{ fontSize: '2.5rem', color: '#0d9488', float: 'left', lineHeight: 0.8, marginRight: '8px', marginTop: '8px' }}>S</span>
                 elamat datang di website resmi Puskesmas Karang Rejo. Sebagai Pusat Pelayanan Kesehatan Terintegrasi dan Bermutu, kami berkomitmen penuh untuk memberikan pelayanan prima yang inklusif bagi seluruh masyarakat. 
                 <br/><br/>
                 Kami percaya bahwa kesehatan adalah fondasi utama kesejahteraan, sehingga melalui inovasi klaster pelayanan, kami hadir lebih dekat untuk menjamin akses kesehatan yang lebih baik bagi Anda dan keluarga. Sesuai dengan tata nilai SMART, kami senantiasa Semangat Melayani dengan Amanah, Responsif, dan Tanggung Jawab. 
@@ -116,14 +116,14 @@ const Pimpinan = () => {
               viewport={{ once: true }}
               sx={{ 
                 p: { xs: 4, md: 5 }, 
-                background: "linear-gradient(135deg, #193b68 0%, #112643 100%)",
+                background: "linear-gradient(135deg, #0d9488 0%, #115e59 100%)",
                 borderRadius: '24px',
                 position: 'relative',
                 overflow: 'hidden',
-                boxShadow: "0 20px 40px rgba(25,59,104,0.2)"
+                boxShadow: "0 20px 40px rgba(13, 148, 136,0.2)"
               }}
             >
-              <Box sx={{ position: 'absolute', top: -10, left: 20, opacity: 0.1, color: '#D4AF37' }}>
+              <Box sx={{ position: 'absolute', top: -10, left: 20, opacity: 0.1, color: '#10b981' }}>
                 <Quote size={100} />
               </Box>
               
@@ -132,9 +132,9 @@ const Pimpinan = () => {
               </Typography>
               
               <Box sx={{ mt: 3, pt: 3, borderTop: "1px solid rgba(255,255,255,0.1)", display: 'flex', alignItems: 'center', gap: 2, position: 'relative', zIndex: 1 }}>
-                <Avatar src={foto} sx={{ width: 40, height: 40, border: "2px solid #D4AF37" }} />
+                <Avatar src={foto} sx={{ width: 40, height: 40, border: "2px solid #10b981" }} />
                 <Box>
-                  <Typography variant="subtitle2" sx={{ color: "#D4AF37", fontWeight: "bold" }}>{pimpinan.nama}</Typography>
+                  <Typography variant="subtitle2" sx={{ color: "#10b981", fontWeight: "bold" }}>{pimpinan.nama}</Typography>
                   <Typography variant="caption" sx={{ color: "rgba(255,255,255,0.6)" }}>{pimpinan.jabatan}</Typography>
                 </Box>
               </Box>

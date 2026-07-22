@@ -128,7 +128,7 @@ const HasilSurvei = () => {
                           sx={{
                             position: "absolute",
                             inset: 0,
-                            background: "linear-gradient(to top, rgba(25, 59, 104, 0.8) 0%, rgba(25, 59, 104, 0.2) 100%)",
+                            background: "linear-gradient(to top, rgba(13, 148, 136, 0.8) 0%, rgba(13, 148, 136, 0.2) 100%)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -139,7 +139,7 @@ const HasilSurvei = () => {
                           <ZoomInIcon sx={{ color: "white", fontSize: 40, mb: 1 }} />
                         </Box>
                         <Box sx={{ p: 2, bgcolor: "white" }}>
-                          <Typography sx={{ fontWeight: 700, color: "#193b68", fontSize: "0.95rem", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                          <Typography sx={{ fontWeight: 700, color: "#0d9488", fontSize: "0.95rem", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
                             {item.judul}
                           </Typography>
                         </Box>

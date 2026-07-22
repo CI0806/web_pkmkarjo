@@ -34,14 +34,14 @@ const TopBar = () => {
   return (
     <Box
       sx={{
-        bgcolor: "#193b68",
+        bgcolor: "#0d9488",
         color: "#ffffff",
         py: 0.8,
         fontSize: "0.75rem",
         display: { xs: "none", md: "block" },
         position: "relative",
         overflow: "hidden",
-        borderBottom: "1px solid rgba(212, 175, 55, 0.3)",
+        borderBottom: "1px solid rgba(16, 185, 129, 0.3)",
         "&::after": {
           content: '""',
           position: "absolute",
@@ -50,7 +50,7 @@ const TopBar = () => {
           width: "50%",
           height: "2px",
           background:
-            "linear-gradient(90deg, transparent, #D4AF37, transparent)",
+            "linear-gradient(90deg, transparent, #10b981, transparent)",
           animation: "shine 3s infinite linear",
         },
         "@keyframes shine": shineAnimation,
@@ -73,10 +73,10 @@ const TopBar = () => {
 
             {/* Baris WhatsApp */}
             <Stack direction="row" alignItems="center" spacing={1} mt={0.5}>
-              <WhatsApp sx={{ color: "#D4AF37", fontSize: "1rem" }} />
+              <WhatsApp sx={{ color: "#10b981", fontSize: "1rem" }} />
               <Typography
                 variant="caption"
-                sx={{ fontWeight: 600, color: "#D4AF37" }}>
+                sx={{ fontWeight: 600, color: "#10b981" }}>
                 0812-5878-1378 (Chat Only)
               </Typography>
             </Stack>
@@ -96,7 +96,7 @@ const TopBar = () => {
                 sx={{
                   color: "white",
                   "&:hover": {
-                    color: "#D4AF37",
+                    color: "#10b981",
                     transform: "translateY(-2px)",
                   },
                   transition: "all 0.3s ease",

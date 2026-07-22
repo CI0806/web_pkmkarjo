@@ -9,7 +9,7 @@ const Maklumat = () => {
     {
       text: "Sanggup menyelenggarakan pelayanan kesehatan sesuai dengan standar pelayanan yang telah ditetapkan.",
       icon: <Award size={32} />,
-      color: "#193b68" // Royal Blue
+      color: "#0d9488" // Royal Blue
     },
     {
       text: "Memberikan pelayanan sesuai dengan kewajiban dan akan melakukan perbaikan secara terus menerus.",
@@ -19,7 +19,7 @@ const Maklumat = () => {
     {
       text: "Apabila terdapat ketidaksesuaian standar pelayanan, kami siap menerima sanksi sesuai peraturan perundang-undangan, dan/atau memberikan kompensasi apabila pelayanan yang diberikan tidak sesuai standar.",
       icon: <Scale size={32} />,
-      color: "#D4AF37" // Gold
+      color: "#10b981" // Gold
     }
   ];
 
@@ -114,11 +114,11 @@ const Maklumat = () => {
               sx={{ 
                 p: { xs: 4, md: 5 }, 
                 borderRadius: "24px", 
-                bgcolor: "#193b68", 
+                bgcolor: "#0d9488", 
                 color: "white",
                 display: "inline-block",
                 textAlign: "center",
-                boxShadow: "0 20px 40px rgba(25, 59, 104, 0.2)",
+                boxShadow: "0 20px 40px rgba(13, 148, 136, 0.2)",
                 position: "relative",
                 overflow: "hidden"
               }}

@@ -180,7 +180,7 @@ const Gallery = () => {
                               sx={{
                                 position: "absolute",
                                 inset: 0,
-                                background: "linear-gradient(to top, rgba(25,59,104,0.9) 0%, rgba(0,0,0,0.1) 60%)",
+                                background: "linear-gradient(to top, rgba(13, 148, 136,0.9) 0%, rgba(0,0,0,0.1) 60%)",
                                 opacity: 0.8,
                                 transition: "opacity 0.3s ease",
                               }}
@@ -189,7 +189,7 @@ const Gallery = () => {
                             {/* Info */}
                             <Box sx={{ position: "absolute", bottom: 0, left: 0, right: 0, p: 2.5 }}>
                               <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 0.5 }}>
-                                <FolderIcon sx={{ color: "#D4AF37", fontSize: 20 }} />
+                                <FolderIcon sx={{ color: "#10b981", fontSize: 20 }} />
                                 <Typography sx={{ color: "white", fontWeight: 700, fontSize: "1rem", lineHeight: 1.3 }}>
                                   {folder.name}
                                 </Typography>
@@ -197,7 +197,7 @@ const Gallery = () => {
                               <Chip
                                 label={`${folder.count} foto`}
                                 size="small"
-                                sx={{ bgcolor: "rgba(212,175,55,0.3)", color: "#facc15", fontWeight: 700, fontSize: "0.72rem", border: "1px solid rgba(212,175,55,0.5)" }}
+                                sx={{ bgcolor: "rgba(16, 185, 129,0.3)", color: "#facc15", fontWeight: 700, fontSize: "0.72rem", border: "1px solid rgba(16, 185, 129,0.5)" }}
                               />
                             </Box>
                           </Card>
@@ -227,7 +227,7 @@ const Gallery = () => {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 4 }}>
                 <IconButton
                   onClick={() => setSelectedFolder(null)}
-                  sx={{ bgcolor: "white", boxShadow: 1, "&:hover": { bgcolor: "#193b68", color: "white" } }}>
+                  sx={{ bgcolor: "white", boxShadow: 1, "&:hover": { bgcolor: "#0d9488", color: "white" } }}>
                   <ArrowBack />
                 </IconButton>
                 <Box>
@@ -277,7 +277,7 @@ const Gallery = () => {
                           sx={{
                             position: "absolute",
                             inset: 0,
-                            background: "linear-gradient(to top, rgba(25,59,104,0.9) 0%, transparent 70%)",
+                            background: "linear-gradient(to top, rgba(13, 148, 136,0.9) 0%, transparent 70%)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -389,7 +389,7 @@ const Gallery = () => {
                 borderRadius: 1.5,
                 cursor: "pointer",
                 flexShrink: 0,
-                border: idx === lightbox.index ? "2px solid #D4AF37" : "2px solid transparent",
+                border: idx === lightbox.index ? "2px solid #10b981" : "2px solid transparent",
                 opacity: idx === lightbox.index ? 1 : 0.55,
                 transition: "all 0.2s ease",
                 "&:hover": { opacity: 1 },

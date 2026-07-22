@@ -93,9 +93,9 @@ const StrukturOrganisasi = () => {
               elevation={0}
               sx={{
                 p: { xs: 3, md: 4 },
-                background: "linear-gradient(135deg, #193b68 0%, #112643 100%)",
+                background: "linear-gradient(135deg, #0d9488 0%, #115e59 100%)",
                 color: "#fff",
-                borderBottom: "6px solid #D4AF37",
+                borderBottom: "6px solid #10b981",
                 textAlign: "center",
                 borderRadius: "24px",
                 display: "flex",
@@ -103,7 +103,7 @@ const StrukturOrganisasi = () => {
                 alignItems: "center",
                 gap: 2,
                 minWidth: { xs: "300px", md: "400px" },
-                boxShadow: "0 25px 50px -12px rgba(25, 59, 104, 0.25)",
+                boxShadow: "0 25px 50px -12px rgba(13, 148, 136, 0.25)",
                 position: "relative",
                 overflow: "hidden"
               }}
@@ -122,7 +122,7 @@ const StrukturOrganisasi = () => {
                 }}
               />
               <Box>
-                <Typography variant="overline" sx={{ color: "#D4AF37", letterSpacing: 2, fontWeight: 800 }}>
+                <Typography variant="overline" sx={{ color: "#10b981", letterSpacing: 2, fontWeight: 800 }}>
                   KEPALA PUSKESMAS
                 </Typography>
                 <Typography variant="h5" fontWeight="900" sx={{ mt: 0.5 }}>
@@ -134,7 +134,7 @@ const StrukturOrganisasi = () => {
 
           {/* Garis Penghubung Utama */}
           <motion.div initial={{ height: 0 }} animate={{ height: 40 }} transition={{ duration: 0.5, delay: 0.4 }}>
-            <Box sx={{ width: "4px", height: "100%", background: "linear-gradient(to bottom, #193b68, #94a3b8)", borderRadius: 2 }} />
+            <Box sx={{ width: "4px", height: "100%", background: "linear-gradient(to bottom, #0d9488, #94a3b8)", borderRadius: 2 }} />
           </motion.div>
           
           <motion.div initial={{ width: 0 }} animate={{ width: "85%" }} transition={{ duration: 0.7, delay: 0.7 }}>
@@ -162,8 +162,8 @@ const StrukturOrganisasi = () => {
                       mb: 2,
                       textAlign: "center",
                       bgcolor: "white",
-                      border: "1px solid rgba(25, 59, 104, 0.1)",
-                      borderTop: "4px solid #193b68",
+                      border: "1px solid rgba(13, 148, 136, 0.1)",
+                      borderTop: "4px solid #0d9488",
                       borderRadius: "16px",
                       boxShadow: "0 10px 30px rgba(0,0,0,0.04)",
                       display: "flex",
@@ -173,13 +173,13 @@ const StrukturOrganisasi = () => {
                       transition: "all 0.3s ease",
                       "&:hover": {
                         transform: "translateY(-5px)",
-                        boxShadow: "0 15px 40px rgba(25, 59, 104, 0.12)",
-                        borderColor: "rgba(25, 59, 104, 0.2)"
+                        boxShadow: "0 15px 40px rgba(13, 148, 136, 0.12)",
+                        borderColor: "rgba(13, 148, 136, 0.2)"
                       }
                     }}
                   >
                     <Box sx={{ bgcolor: "#f1f5f9", px: 2, py: 0.5, borderRadius: 4 }}>
-                      <Typography variant="overline" fontWeight="800" sx={{ color: "#193b68", letterSpacing: 1 }}>
+                      <Typography variant="overline" fontWeight="800" sx={{ color: "#0d9488", letterSpacing: 1 }}>
                         {cluster.name}
                       </Typography>
                     </Box>
@@ -219,8 +219,8 @@ const StrukturOrganisasi = () => {
                           borderRadius: "12px",
                           transition: "0.2s",
                           "&:hover": { 
-                            bgcolor: "#193b68", 
-                            borderColor: "#193b68",
+                            bgcolor: "#0d9488", 
+                            borderColor: "#0d9488",
                             "& .pos-text": { color: "white" },
                             "& .staff-text": { color: "rgba(255,255,255,0.7)" }
                           },
