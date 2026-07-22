@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx playwright@1.60.0 screenshot \"http://localhost:5173\" \"C:/Users/sdnsa/AppData/Local/Temp/ss_news_fix.png\" --full-page --wait-for-timeout 5000)"
+    ]
+  }
+}
