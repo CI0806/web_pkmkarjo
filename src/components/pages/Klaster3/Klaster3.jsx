@@ -25,7 +25,7 @@ const Klaster3 = () => {
       <Container maxWidth="lg" sx={{ mt: 8 }}>
         <Grid container spacing={4}>
           {/* Kolom Kiri: Layanan Utama */}
-          <Grid item size={{xs:12, md:8}} >
+          <Grid item size={{xs:12, md:8}}>
             <Typography variant="h5" fontWeight="bold" sx={{ mb: 3 }}>Layanan Utama</Typography>
             <Grid container spacing={2}>
               {layananDewasaLansia.map((item, index) => (

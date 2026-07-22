@@ -48,7 +48,7 @@ const ContactPerson = () => {
       <Container maxWidth="lg" sx={{ mt: { xs: 6, md: -4 }, position: "relative", zIndex: 10 }}>
         <Grid container spacing={4} justifyContent="center">
           {contacts.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item size={{ xs: 12, md: 4 }} key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

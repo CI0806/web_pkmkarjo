@@ -159,7 +159,7 @@ const Berita = () => {
             ))
           ) : currentData.length > 0 ? (
             currentData.map((news) => (
-              <Grid item  size={{xs:12, sm:6, md:4}} key={news.id}>
+              <Grid item size={{xs:12, sm:6, md:4}} key={news.id}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

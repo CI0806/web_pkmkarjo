@@ -147,7 +147,7 @@ const HasilSurvei = () => {
                     </Grid>
                   ))
                 : (
-                  <Grid item xs={12}>
+                  <Grid item size={{ xs: 12 }}>
                     <Box sx={{ textAlign: "center", py: 10 }}>
                       <Typography color="text.secondary">Belum ada data Hasil Survei.</Typography>
                     </Box>

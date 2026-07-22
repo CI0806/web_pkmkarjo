@@ -72,7 +72,7 @@ const VisiMisi = () => {
           <Box sx={{ position: "absolute", bottom: -80, right: 100, width: 150, height: 150, bgcolor: "rgba(212,175,55,0.1)", borderRadius: "50%" }} />
 
           <Grid container spacing={4} alignItems="center" sx={{ position: "relative", zIndex: 1 }}>
-            <Grid item xs={12} md={2} sx={{ display: "flex", justifyContent: "center" }}>
+            <Grid item size={{ xs: 12, md: 2 }} sx={{ display: "flex", justifyContent: "center" }}>
               <Avatar
                 sx={{
                   width: 80,
@@ -85,7 +85,7 @@ const VisiMisi = () => {
                 <Lightbulb size={40} />
               </Avatar>
             </Grid>
-            <Grid item xs={12} md={10}>
+            <Grid item size={{ xs: 12, md: 10 }}>
               <Typography
                 variant="overline"
                 sx={{ fontWeight: 800, color: "#D4AF37", letterSpacing: 3, mb: 1, display: "block" }}
@@ -139,7 +139,7 @@ const VisiMisi = () => {
           >
             <Grid container spacing={4} justifyContent="center">
               {missionItems.map((item, index) => (
-                <Grid item xs={12} md={6} key={index}>
+                <Grid item size={{ xs: 12, md: 6 }} key={index}>
                   <MotionPaper
                     variants={itemVariants}
                     whileHover={{ y: -10, transition: { duration: 0.2 } }}
@@ -210,7 +210,7 @@ const VisiMisi = () => {
           </Box>
 
           <Grid container spacing={4} alignItems="center" sx={{ position: "relative", zIndex: 1 }}>
-            <Grid item xs={12} md={2} sx={{ display: "flex", justifyContent: "center" }}>
+            <Grid item size={{ xs: 12, md: 2 }} sx={{ display: "flex", justifyContent: "center" }}>
               <Avatar
                 sx={{
                   width: 80,
@@ -223,7 +223,7 @@ const VisiMisi = () => {
                 <ViewComfyAltRounded sx={{ fontSize: 40 }} />
               </Avatar>
             </Grid>
-            <Grid item xs={12} md={10}>
+            <Grid item size={{ xs: 12, md: 10 }}>
               <Typography variant="h4" sx={{ fontWeight: 900, mb: 2, letterSpacing: -0.5, color: "#193b68" }}>
                 Tata Nilai Puskesmas
               </Typography>

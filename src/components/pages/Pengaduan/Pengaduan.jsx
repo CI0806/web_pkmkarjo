@@ -119,7 +119,7 @@ const Pengaduan = () => {
             <Box sx={{ position: "absolute", bottom: -80, right: 100, width: 150, height: 150, bgcolor: "rgba(212,175,55,0.1)", borderRadius: "50%" }} />
 
             <Grid container spacing={4} alignItems="center">
-              <Grid item xs={12} md={8} sx={{ position: "relative", zIndex: 1 }}>
+              <Grid item size={{ xs: 12, md: 8 }} sx={{ position: "relative", zIndex: 1 }}>
                 <Typography variant="h4" fontWeight="800" gutterBottom sx={{ fontSize: { xs: '1.8rem', md: '2.5rem' }, textShadow: "0 2px 10px rgba(0,0,0,0.2)" }}>
                   Kami Siap <span style={{ color: "#D4AF37" }}>Mendengar</span> Anda!
                 </Typography>
@@ -127,7 +127,7 @@ const Pengaduan = () => {
                   Setiap keluhan dan masukan yang Anda berikan adalah kunci bagi kami untuk terus mengevaluasi dan meningkatkan mutu pelayanan di Puskesmas Karang Rejo.
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={4} sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center", position: "relative", zIndex: 1 }}>
+              <Grid item size={{ xs: 12, md: 4 }} sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center", position: "relative", zIndex: 1 }}>
                 <Avatar sx={{ width: 120, height: 120, bgcolor: "rgba(255,255,255,0.1)", backdropFilter: "blur(10px)" }}>
                   <SupportAgentIcon sx={{ fontSize: 60, color: "#D4AF37" }} />
                 </Avatar>
@@ -138,7 +138,7 @@ const Pengaduan = () => {
 
         <Grid container spacing={5}>
           {/* Kolom Kiri: Prosedur */}
-          <Grid item xs={12} lg={4}>
+          <Grid item size={{ xs: 12, lg: 4 }}>
             <Typography variant="h5" fontWeight="800" color="#193b68" gutterBottom sx={{ mb: 4, display: "flex", alignItems: "center", gap: 1.5 }}>
               <Box sx={{ width: 6, height: 24, bgcolor: "#D4AF37", borderRadius: 10 }} />
               Alur Penanganan
@@ -179,7 +179,7 @@ const Pengaduan = () => {
           </Grid>
 
           {/* Kolom Kanan: Form */}
-          <Grid item xs={12} lg={8}>
+          <Grid item size={{ xs: 12, lg: 8 }}>
             <Fade in timeout={1000}>
               <Paper 
                 elevation={0}
@@ -213,7 +213,7 @@ const Pengaduan = () => {
 
                 <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
                   <Grid container spacing={3}>
-                    <Grid item xs={12}>
+                    <Grid item size={{ xs: 12 }}>
                       <Typography variant="subtitle2" fontWeight="600" color="#475569" sx={{ mb: 1 }}>Nama Lengkap *</Typography>
                       <TextField
                         fullWidth
@@ -226,7 +226,7 @@ const Pengaduan = () => {
                       />
                     </Grid>
                     
-                    <Grid item xs={12} sm={6}>
+                    <Grid item size={{ xs: 12, sm: 6 }}>
                       <Typography variant="subtitle2" fontWeight="600" color="#475569" sx={{ mb: 1 }}>Email Aktif (Opsional)</Typography>
                       <TextField
                         fullWidth
@@ -239,7 +239,7 @@ const Pengaduan = () => {
                       />
                     </Grid>
 
-                    <Grid item xs={12} sm={6}>
+                    <Grid item size={{ xs: 12, sm: 6 }}>
                       <Typography variant="subtitle2" fontWeight="600" color="#475569" sx={{ mb: 1 }}>No. Telepon / WA (Opsional)</Typography>
                       <TextField
                         fullWidth
@@ -250,7 +250,7 @@ const Pengaduan = () => {
                       />
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid item size={{ xs: 12 }}>
                       <Typography variant="subtitle2" fontWeight="600" color="#475569" sx={{ mb: 1 }}>Rincian Pengaduan / Keluhan *</Typography>
                       <TextField
                         fullWidth
@@ -265,7 +265,7 @@ const Pengaduan = () => {
                       />
                     </Grid>
 
-                    <Grid item xs={12} sx={{ mt: 2 }}>
+                    <Grid item size={{ xs: 12 }} sx={{ mt: 2 }}>
                       <Button
                         type="submit"
                         variant="contained"

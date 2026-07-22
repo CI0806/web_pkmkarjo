@@ -61,7 +61,7 @@ const Dashboard = () => {
         sx={{ mt: { xs: -6, md: -10 }, position: "relative", zIndex: 10 }}>
         <Grid container spacing={4}>
           {features.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item size={{ xs: 12, md: 4 }} key={index}>
               <MotionPaper
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ const Dashboard = () => {
       {/* Info & Quick Links Section */}
       <Container maxWidth="lg" sx={{ mt: 12, mb: 10 }}>
         <Grid container spacing={6} alignItems="center">
-          <Grid item xs={12} md={6}>
+          <Grid item size={{ xs: 12, md: 6 }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -273,10 +273,10 @@ const Dashboard = () => {
             </motion.div>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid item size={{ xs: 12, md: 6 }}>
             <Grid container spacing={3}>
               {quickLinks.map((menu, i) => (
-                <Grid item xs={6} key={i}>
+                <Grid item size={{ xs: 6 }} key={i}>
                   <MotionPaper
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
