@@ -43,7 +43,7 @@ const Maklumat = () => {
 
         <Grid container spacing={4} justifyContent="center" sx={{ mb: 10 }}>
           {maklumat.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item size={{ xs: 12, md: 4 }} key={index}>
               <motion.div 
                 initial={{ opacity: 0, y: 40 }} 
                 animate={{ opacity: 1, y: 0 }} 
@@ -125,19 +125,12 @@ const Maklumat = () => {
             >
               <Box sx={{ position: "absolute", top: -50, right: -50, width: 150, height: 150, borderRadius: "50%", bgcolor: "rgba(255,255,255,0.05)" }} />
               
-              <Typography variant="body1" sx={{ mb: 6, color: "rgba(255,255,255,0.8)" }}>
+              <Typography variant="body1" sx={{ mb: 10, color: "rgba(255,255,255,0.8)" }}>
                 Tarakan, 21 Oktober 2025
                 <br />
                 Kepala Puskesmas Karang Rejo
               </Typography>
               
-              {/* Fake Signature Font or Style */}
-              <Box sx={{ mb: 2 }}>
-                <Typography variant="h3" sx={{ fontFamily: "'Brush Script MT', cursive, serif", color: "#D4AF37", transform: "rotate(-5deg)", display: "inline-block" }}>
-                  Ametta A.
-                </Typography>
-              </Box>
-
               <Typography variant="h6" fontWeight="bold" sx={{ mt: 3 }}>
                 dr. Hj. Ametta Angastuty
               </Typography>
