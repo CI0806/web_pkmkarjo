@@ -153,58 +153,65 @@ const Dashboard = () => {
       </Container>
 
 
-      {/* Promosi Telekonseling PMBA & VCT */}
-      <Container maxWidth="lg" sx={{ mt: 8, position: "relative", zIndex: 10 }}>
+      {/* Promosi Telekonseling PMBA */}
+      <Container maxWidth="lg" sx={{ mt: 10, position: "relative", zIndex: 10 }}>
         <MotionPaper
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+          viewport={{ once: true, margin: "-100px" }}
           sx={{
             p: { xs: 4, md: 6 },
-            borderRadius: 6,
-            background: "linear-gradient(135deg, #193b68 0%, #0d213f 100%)",
+            borderRadius: "32px",
+            background: "linear-gradient(135deg, #193b68 0%, #112643 100%)",
             color: "white",
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
             justifyContent: "space-between",
             gap: 4,
-            boxShadow: "0 20px 40px rgba(25, 59, 104, 0.3)",
+            boxShadow: "0 30px 60px -15px rgba(25, 59, 104, 0.5)",
             position: "relative",
-            overflow: "hidden"
+            overflow: "hidden",
+            border: "1px solid rgba(255,255,255,0.1)",
           }}>
-          <Box
-            sx={{
-              position: "absolute",
-              top: -80,
-              right: -40,
-              width: 250,
-              height: 250,
-              borderRadius: "50%",
-              background: "rgba(212, 175, 55, 0.15)",
-              filter: "blur(40px)",
-            }}
-          />
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3, flex: 1, position: "relative", zIndex: 2 }}>
-            <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
-              <Avatar sx={{ width: 64, height: 64, bgcolor: "#D4AF37", boxShadow: "0 10px 20px rgba(212, 175, 55, 0.3)" }}>
-                <ShieldCheck size={32} color="#193b68" />
-              </Avatar>
+          
+          {/* Animated Background Orbs */}
+          <Box sx={{ position: "absolute", top: -100, right: -50, width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%)", filter: "blur(40px)", animation: "pulse 4s infinite" }} />
+          <Box sx={{ position: "absolute", bottom: -100, left: -50, width: 250, height: 250, borderRadius: "50%", background: "radial-gradient(circle, rgba(25, 118, 210, 0.3) 0%, transparent 70%)", filter: "blur(40px)" }} />
+          <Box sx={{ position: "absolute", inset: 0, backgroundImage: `linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)`, backgroundSize: "30px 30px", opacity: 0.4 }} />
+
+          <Box sx={{ display: "flex", alignItems: "flex-start", gap: { xs: 2, md: 4 }, flex: 1, position: "relative", zIndex: 2 }}>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Box sx={{ position: "relative" }}>
+                <Avatar sx={{ width: 80, height: 80, bgcolor: "rgba(212,175,55,0.15)", border: "2px solid #D4AF37", boxShadow: "0 10px 25px rgba(212, 175, 55, 0.3)" }}>
+                  <ShieldCheck size={40} color="#D4AF37" />
+                </Avatar>
+                {/* Glowing ring */}
+                <Box sx={{ position: "absolute", inset: -5, borderRadius: "50%", border: "1px solid rgba(212,175,55,0.5)", animation: "spin 10s linear infinite", "@keyframes spin": { "100%": { transform: "rotate(360deg)" } } }} />
+              </Box>
             </Box>
             <Box>
-              <Typography variant="overline" sx={{ fontWeight: 800, color: "#D4AF37", letterSpacing: 1.5 }}>
-                LAYANAN TELEKONSELING
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1.5, flexWrap: "wrap" }}>
+                <Typography variant="overline" sx={{ fontWeight: 800, color: "#D4AF37", letterSpacing: 2 }}>
+                  INOVASI PELAYANAN PUBLIK
+                </Typography>
+                <Box sx={{ bgcolor: "rgba(255,255,255,0.1)", px: 1.5, py: 0.5, borderRadius: 2, border: "1px solid rgba(255,255,255,0.2)", backdropFilter: "blur(5px)" }}>
+                  <Typography variant="caption" sx={{ fontWeight: 800, color: "white" }}>TELEKONSELING</Typography>
+                </Box>
+              </Box>
+              
+              <Typography variant="h3" sx={{ fontWeight: 900, color: "white", mb: 2, fontSize: { xs: '1.8rem', md: '2.5rem' }, letterSpacing: "-0.5px" }}>
+                ViTA: Konseling PMBA Online
               </Typography>
-              <Typography variant="h5" sx={{ fontWeight: 800, color: "white", mb: 1, mt: 0.5, fontSize: { xs: '1.4rem', md: '1.8rem' } }}>
-                ViTA: Konseling PMBA & VCT Online
-              </Typography>
-              <Typography variant="body1" sx={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.7 }}>
-                <strong>ViTA (Virtual interaksi & Tele-Asuhan)</strong> hadir dengan aman, anonim, dan terenkripsi. Dapatkan layanan konsultasi VCT dan gizi balita (PMBA) dengan tenaga kesehatan profesional kami dari rumah.
+              
+              <Typography variant="body1" sx={{ color: "rgba(255,255,255,0.85)", lineHeight: 1.8, fontSize: "1.05rem", maxWidth: "600px" }}>
+                <strong style={{ color: "#D4AF37" }}>ViTA (Virtual interaksi & Tele-Asuhan)</strong> hadir dengan aman, anonim, dan terenkripsi. Dapatkan layanan konsultasi gizi balita (PMBA) langsung dengan tenaga kesehatan profesional kami secara nyaman dari rumah Anda.
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ position: "relative", zIndex: 2, minWidth: { md: "200px" }, textAlign: { xs: "center", md: "right" } }}>
+          
+          <Box sx={{ position: "relative", zIndex: 2, minWidth: { md: "220px" }, textAlign: { xs: "center", md: "right" } }}>
             <Button
               variant="contained"
               size="large"
@@ -213,17 +220,18 @@ const Dashboard = () => {
               sx={{
                 bgcolor: "#D4AF37",
                 color: "#193b68",
-                fontWeight: 800,
-                px: 4,
-                py: 2,
-                borderRadius: 10,
-                fontSize: "1rem",
+                fontWeight: 900,
+                px: 5,
+                py: 2.5,
+                borderRadius: 50,
+                fontSize: "1.1rem",
+                boxShadow: "0 10px 20px rgba(212, 175, 55, 0.4), inset 0 -3px 0 rgba(0,0,0,0.1)",
                 "&:hover": {
                   bgcolor: "#facc15",
-                  transform: "translateY(-3px)",
-                  boxShadow: "0 15px 25px rgba(212, 175, 55, 0.4)",
+                  transform: "translateY(-5px)",
+                  boxShadow: "0 15px 30px rgba(212, 175, 55, 0.6), inset 0 -3px 0 rgba(0,0,0,0.1)",
                 },
-                transition: "all 0.3s ease",
+                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
               }}>
               Mulai Konseling
             </Button>
