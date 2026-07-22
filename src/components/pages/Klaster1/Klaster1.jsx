@@ -32,7 +32,7 @@ const Klaster1 = () => {
             <Grid item size={{xs:12, sm:6, md:4}} key={index}>
               <Card sx={{ height: "100%", borderRadius: "16px", transition: "0.3s", "&:hover": { boxShadow: 6 } }}>
                 <CardContent sx={{ p: 3 }}>
-                  <Box sx={{ color: "#1e3a8a", mb: 2 }}>{item.icon}</Box>
+                  <Box sx={{ color: "#134e4a", mb: 2 }}>{item.icon}</Box>
                   <Typography variant="h6" fontWeight="bold" sx={{ mb: 1 }}>{item.title}</Typography>
                   <Typography variant="body2" color="text.secondary">{item.desc}</Typography>
                 </CardContent>
@@ -42,8 +42,8 @@ const Klaster1 = () => {
         </Grid>
 
         {/* Info Tambahan */}
-        <Paper sx={{ mt: 6, p: 4, borderRadius: "16px", bgcolor: "#eff6ff", borderLeft: "6px solid #1e3a8a" }}>
-          <Typography variant="h6" fontWeight="bold" color="#1e3a8a" gutterBottom>
+        <Paper sx={{ mt: 6, p: 4, borderRadius: "16px", bgcolor: "#f0fdfa", borderLeft: "6px solid #134e4a" }}>
+          <Typography variant="h6" fontWeight="bold" color="#134e4a" gutterBottom>
             Fokus Utama Klaster 1
           </Typography>
           <Typography variant="body1" color="text.secondary">

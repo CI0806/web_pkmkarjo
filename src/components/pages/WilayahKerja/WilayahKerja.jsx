@@ -32,7 +32,7 @@ const WilayahKerja = () => {
                     {item.icon}
                     <Typography variant="subtitle2" sx={{ ml: 1, color: "text.secondary" }}>{item.title}</Typography>
                   </Box>
-                  <Typography variant="h5" fontWeight="bold" sx={{ color: "#1e3a8a" }}>{item.value}</Typography>
+                  <Typography variant="h5" fontWeight="bold" sx={{ color: "#134e4a" }}>{item.value}</Typography>
                   <Typography variant="caption" sx={{ display: "block", mt: 1 }}>{item.sub}</Typography>
                 </CardContent>
               </Card>

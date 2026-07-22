@@ -59,11 +59,11 @@ const Kunjungan = () => {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="total" fill="#1e3a8a">
+                <Bar dataKey="total" fill="#134e4a">
                   {data.map((entry, index) => (
                     <Cell
                       key={`cell-${index}`}
-                      fill={index === 0 ? "#db2777" : "#1e3a8a"}
+                      fill={index === 0 ? "#db2777" : "#134e4a"}
                     />
                   ))}
                 </Bar>

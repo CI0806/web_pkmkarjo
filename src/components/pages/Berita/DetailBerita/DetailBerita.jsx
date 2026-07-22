@@ -117,7 +117,7 @@ const DetailBerita = () => {
             {/* Metadata */}
             <Stack direction={{ xs: "column", sm: "row" }} spacing={3} sx={{ mb: 4 }}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <CalendarMonth sx={{ fontSize: 20, color: "#3b82f6" }} />
+                <CalendarMonth sx={{ fontSize: 20, color: "#14b8a6" }} />
                 <Typography variant="body2" color="text.secondary" fontWeight="500">
                   {new Date(berita.created_at).toLocaleDateString("id-ID", {
                     day: "numeric",
@@ -127,7 +127,7 @@ const DetailBerita = () => {
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <PersonOutlineOutlined sx={{ fontSize: 20, color: "#3b82f6" }} />
+                <PersonOutlineOutlined sx={{ fontSize: 20, color: "#14b8a6" }} />
                 <Typography variant="body2" color="text.secondary" fontWeight="500">
                   {berita.author || "Admin Puskesmas"}
                 </Typography>
@@ -167,7 +167,7 @@ const DetailBerita = () => {
                   fontWeight: "bold",
                   float: "left",
                   mr: 1.5,
-                  color: "#3b82f6",
+                  color: "#14b8a6",
                   lineHeight: 0.8,
                   mt: 1,
                 },

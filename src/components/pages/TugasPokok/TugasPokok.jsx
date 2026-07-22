@@ -24,7 +24,7 @@ const TugasPokok = () => {
   const dataKlaster = [
     {
       title: "Kepala Puskesmas",
-      color: "#1e3a8a",
+      color: "#134e4a",
       tugas:
         "Memimpin dan mengoordinasikan penyelenggaraan pelayanan kesehatan masyarakat dan pelayanan kesehatan perorangan tingkat pertama di wilayah kerja Puskesmas.",
       details: [

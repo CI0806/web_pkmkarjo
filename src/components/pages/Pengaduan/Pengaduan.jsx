@@ -66,7 +66,7 @@ const Pengaduan = () => {
       icon: <EditNoteIcon fontSize="large" />,
       title: "1. Isi Formulir",
       desc: "Tuliskan keluhan atau masukan Anda dengan jelas beserta identitas diri.",
-      color: "#3b82f6" // blue
+      color: "#14b8a6" // blue
     },
     {
       icon: <FactCheckIcon fontSize="large" />,

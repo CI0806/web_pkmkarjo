@@ -2,12 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 const replacements = [
-  { old: /#193b68/gi, new: '#0d9488' }, // Royal Blue -> Teal (Primary)
-  { old: /#112643/gi, new: '#115e59' }, // Dark Navy -> Dark Teal
-  { old: /#D4AF37/gi, new: '#10b981' }, // Gold -> Emerald (Accent/Icons)
-  { old: /#b48c1e/gi, new: '#059669' }, // Dark Gold -> Dark Emerald
-  { old: /rgba\(212,\s*175,\s*55/gi, new: 'rgba(16, 185, 129' }, // Gold rgba
-  { old: /rgba\(25,\s*59,\s*104/gi, new: 'rgba(13, 148, 136' }, // Royal Blue rgba
+  // Standard Tailwind Blues to Teals
+  { old: /#1e3a8a/gi, new: '#134e4a' }, // blue-900 -> teal-900
+  { old: /#1d4ed8/gi, new: '#0f766e' }, // blue-700 -> teal-700
+  { old: /#2563eb/gi, new: '#0d9488' }, // blue-600 -> teal-600
+  { old: /#3b82f6/gi, new: '#14b8a6' }, // blue-500 -> teal-500
+  { old: /#60a5fa/gi, new: '#2dd4bf' }, // blue-400 -> teal-400
+  { old: /#eff6ff/gi, new: '#f0fdfa' }, // blue-50 -> teal-50
+  
+  // Custom Blues to Teals
+  { old: /#0ea5e9/gi, new: '#10b981' }, // sky-500 -> emerald-500
+  { old: /#e0e7ff/gi, new: '#ccfbf1' }, // indigo-100 -> teal-100
+  { old: /#4338ca/gi, new: '#0f766e' }, // indigo-700 -> teal-700
 ];
 
 function processDirectory(dir) {
@@ -26,11 +32,11 @@ function processDirectory(dir) {
       
       if (content !== newContent) {
         fs.writeFileSync(fullPath, newContent, 'utf8');
-        console.log('Changed colors in:', fullPath);
+        console.log('Changed more colors in:', fullPath);
       }
     }
   }
 }
 
 processDirectory(path.join(__dirname, 'src'));
-console.log('Theme change complete.');
+console.log('Deep theme change complete.');

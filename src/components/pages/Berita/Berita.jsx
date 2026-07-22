@@ -133,7 +133,7 @@ const Berita = () => {
                 disableUnderline: true,
                 startAdornment: (
                   <InputAdornment position="start" sx={{ pl: 2 }}>
-                    <Search size={20} color="#1e3a8a" />
+                    <Search size={20} color="#134e4a" />
                   </InputAdornment>
                 ),
               }}
@@ -209,7 +209,7 @@ const Berita = () => {
                           alignItems: "center",
                           gap: 1,
                         }}>
-                        <Calendar size={14} color="#3b82f6" />
+                        <Calendar size={14} color="#14b8a6" />
                         <Typography variant="caption" sx={{ fontWeight: 700 }}>
                           {new Date(news.created_at).toLocaleDateString(
                             "id-ID",
@@ -273,9 +273,9 @@ const Berita = () => {
                             borderRadius: 3,
                             textTransform: "none",
                             fontWeight: 700,
-                            bgcolor: "#eff6ff",
-                            color: "#3b82f6",
-                            "&:hover": { bgcolor: "#3b82f6", color: "white" },
+                            bgcolor: "#f0fdfa",
+                            color: "#14b8a6",
+                            "&:hover": { bgcolor: "#14b8a6", color: "white" },
                           }}
                           onClick={() => navigate(`/read/${news.slug}`)}>
                           Baca Selengkapnya

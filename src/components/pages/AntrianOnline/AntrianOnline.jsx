@@ -64,7 +64,7 @@ const AntrianOnline = () => {
               display: "flex",
               alignItems: "center",
               mb: 4,
-              color: "#1e3a8a",
+              color: "#134e4a",
             }}>
             <PhoneAndroidIcon sx={{ fontSize: 40, mr: 2 }} />
             <Typography variant="h5" fontWeight="bold">
