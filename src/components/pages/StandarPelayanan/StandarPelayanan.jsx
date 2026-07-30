@@ -73,7 +73,7 @@ const StandarPelayanan = () => {
         description="Informasi standar pelayanan dan maklumat pelayanan di Puskesmas Karang Rejo."
       />
 
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         <AnimatePresence mode="wait">
           <motion.div
             key="standar-pelayanan"

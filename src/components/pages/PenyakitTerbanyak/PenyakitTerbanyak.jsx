@@ -44,7 +44,7 @@ const PenyakitTerbanyak = () => {
         title="10 Besar Penyakit Tahun 2025"
         description="Data sepuluh penyakit terbanyak yang ditangani di Puskesmas Karang Rejo selama periode tahun 2025."
       />
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         
         {/* Grafik Penyakit */}
         <Paper elevation={3} sx={{ p: 4, mb: 6, borderRadius: "20px" }}>

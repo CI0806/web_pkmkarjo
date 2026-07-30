@@ -47,7 +47,7 @@ const DetailBerita = () => {
     return (
       <Box sx={{ pb: 8, bgcolor: "#f8fafc", minHeight: "100vh" }}>
         <PageHeader title={"Memuat Berita..."} />
-        <Container maxWidth="md" sx={{ mt: 4 }}>
+        <Container maxWidth="md" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
           <Skeleton variant="text" height={80} />
           <Skeleton variant="rectangular" height={400} sx={{ borderRadius: 4, my: 3 }} />
           <Skeleton variant="text" />
@@ -69,9 +69,9 @@ const DetailBerita = () => {
 
   return (
     <Box sx={{ pb: 8, bgcolor: "#f8fafc", minHeight: "100vh" }}>
-      <PageHeader title={berita.judul} />
+      <PageHeader title="Detail Informasi" />
 
-      <Container maxWidth="md" sx={{ mt: 4, position: "relative", zIndex: 10 }}>
+      <Container maxWidth="md" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10, position: "relative", zIndex: 10 }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

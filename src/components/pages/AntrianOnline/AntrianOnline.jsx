@@ -57,7 +57,7 @@ const AntrianOnline = () => {
         description="Langkah-langkah mudah mendaftar antrean melalui aplikasi Mobile JKN."
       />
 
-      <Container maxWidth="sm" sx={{ mt: 6 }}>
+      <Container maxWidth="sm" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         <Paper elevation={3} sx={{ p: 4, borderRadius: "20px" }}>
           <Box
             sx={{
@@ -97,7 +97,7 @@ const AntrianOnline = () => {
           </Stepper>
         </Paper>
 
-        <Box sx={{ mt: 4, textAlign: "center" }}>
+        <Box sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10, textAlign: "center" }}>
           <Typography variant="body2" color="text.secondary">
             Pendaftaran dibuka 24 jam sebelum jam buka operasional dan ditutup 1
             jam sebelum tutup.

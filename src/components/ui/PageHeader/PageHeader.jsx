@@ -1,6 +1,7 @@
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography, Container, Breadcrumbs, Link as MuiLink } from "@mui/material";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import { useLocation, Link as RouterLink } from "react-router-dom";
 
 const PageHeader = ({ title, description, children }) => {
   const gold = "#D4AF37"; 
@@ -11,6 +12,39 @@ const PageHeader = ({ title, description, children }) => {
     { top: "40%", right: "-10%", size: 250, duration: 25, delay: 2 },
     { bottom: "-20%", left: "30%", size: 200, duration: 15, delay: 5 },
   ];
+
+  const location = useLocation();
+  const pathnames = location.pathname.split("/").filter((x) => x);
+
+  const routeMap = {
+    "visi-misi": "Visi & Misi",
+    "tugas-pokok": "Tugas Pokok & Fungsi",
+    "struktur": "Struktur Organisasi",
+    "pimpinan": "Pimpinan",
+    "wilayah": "Wilayah Kerja",
+    "maklumat-pelayanan": "Maklumat Pelayanan",
+    "hak-kewajiban": "Hak & Kewajiban Pasien",
+    "standar-pelayanan": "Standar Pelayanan",
+    "jadwal": "Jadwal Pelayanan",
+    "antrian-online": "Antrian Online",
+    "klaster1": "Klaster 1 (Manajemen)",
+    "klaster2": "Klaster 2 (Ibu & Anak)",
+    "klaster3": "Klaster 3 (Dewasa & Lansia)",
+    "klaster4": "Klaster 4 (Penanggulangan Penyakit)",
+    "klaster5": "Klaster 5 (Lintas Klaster)",
+    "informasi": "Informasi",
+    "berita": "Berita",
+    "artikel": "Artikel",
+    "pengumuman": "Pengumuman",
+    "kunjungan": "Kunjungan Pasien",
+    "penyakit": "Penyakit Terbanyak",
+    "contact-person": "Contact Person",
+    "gallery": "Gallery",
+    "video": "Video",
+    "pengaduan": "Layanan Pengaduan",
+    "hasil-survei": "Hasil Survei",
+    "read": "Detail Informasi"
+  };
 
   return (
     <Box
@@ -84,6 +118,43 @@ const PageHeader = ({ title, description, children }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}>
           
+          {/* Breadcrumbs Navigasi */}
+          {pathnames.length > 0 && (
+            <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
+              <Breadcrumbs 
+                aria-label="breadcrumb" 
+                sx={{ 
+                  color: "rgba(255,255,255,0.7)", 
+                  fontSize: { xs: "0.8rem", md: "0.9rem" },
+                  '& .MuiBreadcrumbs-separator': { color: "rgba(255,255,255,0.3)" } 
+                }}
+              >
+                <MuiLink component={RouterLink} to="/" underline="hover" sx={{ color: "rgba(255,255,255,0.7)", '&:hover': { color: gold } }}>
+                  Beranda
+                </MuiLink>
+                {pathnames.map((value, index) => {
+                  const isLast = index === pathnames.length - 1;
+                  const to = `/${pathnames.slice(0, index + 1).join("/")}`;
+                  
+                  // Handle UUID or long dynamic IDs: if value is very long or looks like ID, we can skip or use "Detail"
+                  let titleName = routeMap[value] || value.replace(/-/g, " ");
+                  if (titleName.length > 25 && !routeMap[value]) titleName = "Detail";
+                  else titleName = titleName.charAt(0).toUpperCase() + titleName.slice(1);
+
+                  return isLast ? (
+                    <Typography key={to} sx={{ color: gold, fontWeight: 600, fontSize: { xs: "0.8rem", md: "0.9rem" } }}>
+                      {titleName}
+                    </Typography>
+                  ) : (
+                    <MuiLink key={to} component={RouterLink} to={to} underline="hover" sx={{ color: "rgba(255,255,255,0.7)", '&:hover': { color: gold } }}>
+                      {titleName}
+                    </MuiLink>
+                  );
+                })}
+              </Breadcrumbs>
+            </Box>
+          )}
+
           {/* Garis Aksen Emas */}
           <Box sx={{ display: "flex", justifyContent: "center", mb: 3 }}>
             <Box sx={{ width: 60, height: 4, bgcolor: gold, borderRadius: 2 }} />

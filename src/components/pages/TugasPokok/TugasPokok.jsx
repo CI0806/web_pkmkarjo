@@ -122,7 +122,7 @@ const TugasPokok = () => {
         }
       />
 
-      <Container sx={{ mt: 6 }}>
+      <Container sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         <Box textAlign="center" mb={8}>
           <Avatar
             sx={{

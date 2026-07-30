@@ -103,7 +103,7 @@ const Berita = () => {
         description={header.desc} // Menggunakan deskripsi dinamis
       />
 
-      <Container sx={{ mt: 6 }}>
+      <Container sx={{ mt: { xs: -2, md: -6 }, position: "relative", zIndex: 10 }}>
         {/* Search Bar */}
         <Box sx={{ mb: 4, display: "flex", justifyContent: "center", px: 2 }}>
           <Paper
@@ -299,7 +299,7 @@ const Berita = () => {
 
         {/* Pagination */}
         {count > 1 && (
-          <Stack spacing={2} sx={{ mt: 8, alignItems: "center" }}>
+          <Stack spacing={2} sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10, alignItems: "center" }}>
             <Pagination
               count={count}
               page={page}

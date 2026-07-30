@@ -52,7 +52,7 @@ const Video = () => {
         description="Edukasi kesehatan dan dokumentasi kegiatan Puskesmas Karang Rejo dalam format visual."
       />
 
-      <Container sx={{ mt: 6 }}>
+      <Container sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         <Grid container spacing={4}>
           {loading ? (
             [...Array(3)].map((_, i) => (
@@ -129,7 +129,7 @@ const Video = () => {
         </Grid>
 
         {count > 1 && (
-          <Stack spacing={2} sx={{ mt: 8, alignItems: "center" }}>
+          <Stack spacing={2} sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10, alignItems: "center" }}>
             <Pagination
               count={count}
               page={page}

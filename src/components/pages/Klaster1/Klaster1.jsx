@@ -26,7 +26,7 @@ const Klaster1 = () => {
         description="Pusat kendali operasional, administrasi, dan pengembangan mutu Puskesmas Karang Rejo."
       />
 
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         <Grid container spacing={3}>
           {manajemenItems.map((item, index) => (
             <Grid item size={{xs:12, sm:6, md:4}} key={index}>
@@ -42,7 +42,7 @@ const Klaster1 = () => {
         </Grid>
 
         {/* Info Tambahan */}
-        <Paper sx={{ mt: 6, p: 4, borderRadius: "16px", bgcolor: "#eff6ff", borderLeft: "6px solid #1e3a8a" }}>
+        <Paper sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10, p: 4, borderRadius: "16px", bgcolor: "#eff6ff", borderLeft: "6px solid #1e3a8a" }}>
           <Typography variant="h6" fontWeight="bold" color="#1e3a8a" gutterBottom>
             Fokus Utama Klaster 1
           </Typography>

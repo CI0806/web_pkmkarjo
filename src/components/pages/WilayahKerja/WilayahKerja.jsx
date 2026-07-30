@@ -21,7 +21,7 @@ const WilayahKerja = () => {
         description="Informasi cakupan wilayah operasional Puskesmas Karang Rejo."
       />
 
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         {/* Statistik Ringkas */}
         <Grid container spacing={3} sx={{ mb: 6 }}>
           {dataWilayah.map((item, index) => (

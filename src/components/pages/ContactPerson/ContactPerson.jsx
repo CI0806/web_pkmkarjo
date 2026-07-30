@@ -111,8 +111,7 @@ const ContactPerson = () => {
         >
           <Paper
             elevation={0}
-            sx={{
-              mt: 8,
+            sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10,
               p: { xs: 2, md: 3 },
               borderRadius: "24px",
               background: "white",

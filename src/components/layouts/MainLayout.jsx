@@ -10,6 +10,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Footer";
 import TopBar from "./TopBar";
 import { KeyboardArrowUp } from "@mui/icons-material";
+import AccessibilityWidget from "../ui/AccessibilityWidget";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -54,6 +55,8 @@ const MainLayout = () => {
       </Box>
 
       <Footer />
+
+      <AccessibilityWidget />
 
       <Zoom in={showScrollTop}>
         <Fab

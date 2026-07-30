@@ -22,7 +22,7 @@ const Klaster3 = () => {
         description="Layanan kesehatan bagi kelompok usia dewasa dan lanjut usia di Puskesmas Karang Rejo."
       />
 
-      <Container maxWidth="lg" sx={{ mt: 8 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         <Grid container spacing={4}>
           {/* Kolom Kiri: Layanan Utama */}
           <Grid item size={{xs:12, md:8}}>

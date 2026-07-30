@@ -47,7 +47,7 @@ const VisiMisi = () => {
     <Box sx={{ pb: 10, bgcolor: "#f8fafc", minHeight: "100vh" }}>
       <PageHeader title="Visi & Misi" />
       
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         {/* Visi Section */}
         <MotionPaper
           initial={{ opacity: 0, scale: 0.95 }}

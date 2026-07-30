@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import MainLayout from "./components/layouts";
 import Dashboard from "./components/pages/Beranda";
 import SnackbarProvider from "./components/ui/Snackbar";
+import { AccessibilityProvider } from "./contexts/AccessibilityContext";
 import VisiMisi from "./components/pages/VisiMisi";
 import TugasPokok from "./components/pages/TugasPokok";
 import StrukturOrganisasi from "./components/pages/StrukturOrganisasi";
@@ -29,6 +30,7 @@ import Video from "./components/pages/Video";
 import HasilSurvei from "./components/pages/HasilSurvei/HasilSurvei";
 import Pengaduan from "./components/pages/Pengaduan";
 import StandarPelayanan from "./components/pages/StandarPelayanan/StandarPelayanan";
+import NotFound from "./components/pages/NotFound";
 
 const theme = createTheme({
  typography: {
@@ -160,20 +162,26 @@ const router = createBrowserRouter([
         path: "/standar-pelayanan",
         element: <StandarPelayanan />,
       },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
     ],
   },
 ]);
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <SnackbarProvider>
-          <CssBaseline />
-          <RouterProvider router={router} />
-        </SnackbarProvider>
-      </LocalizationProvider>
-    </ThemeProvider>
+    <AccessibilityProvider>
+      <ThemeProvider theme={theme}>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <SnackbarProvider>
+            <CssBaseline />
+            <RouterProvider router={router} />
+          </SnackbarProvider>
+        </LocalizationProvider>
+      </ThemeProvider>
+    </AccessibilityProvider>
   );
 };
 

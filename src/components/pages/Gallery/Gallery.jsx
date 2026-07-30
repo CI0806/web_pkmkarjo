@@ -98,7 +98,7 @@ const Gallery = () => {
         description="Dokumentasi visual berbagai kegiatan dan layanan di Puskesmas Karang Rejo."
       />
 
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
 
         {/* Breadcrumb */}
         <Breadcrumbs sx={{ mb: 4 }}>

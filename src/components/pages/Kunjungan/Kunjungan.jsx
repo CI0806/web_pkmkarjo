@@ -46,7 +46,7 @@ const Kunjungan = () => {
         description="Data kunjungan pasien Puskesmas Karang Rejo berdasarkan kelompok umur."
       />
 
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: -2, md: -6 }, position: 'relative', zIndex: 10 }}>
         {/* Grafik Batang */}
         <Paper elevation={3} sx={{ p: 4, mb: 6, borderRadius: "20px" }}>
           <Typography variant="h6" fontWeight="bold" sx={{ mb: 4 }}>
