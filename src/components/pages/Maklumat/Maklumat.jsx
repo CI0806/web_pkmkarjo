@@ -3,6 +3,7 @@ import { Container, Typography, Box, Paper, Grid, Avatar } from "@mui/material";
 import { Scale, CheckCircle2, Award } from "lucide-react";
 import PageHeader from "@/components/ui/PageHeader";
 import { motion } from "framer-motion";
+import ttdImage from "@/assets/img/ttd.png";
 
 const Maklumat = () => {
   const maklumat = [
@@ -125,13 +126,26 @@ const Maklumat = () => {
             >
               <Box sx={{ position: "absolute", top: -50, right: -50, width: 150, height: 150, borderRadius: "50%", bgcolor: "rgba(255,255,255,0.05)" }} />
               
-              <Typography variant="body1" sx={{ mb: 10, color: "rgba(255,255,255,0.8)" }}>
+              <Typography variant="body1" sx={{ mb: 1, color: "rgba(255,255,255,0.8)" }}>
                 Tarakan, 21 Oktober 2025
                 <br />
                 Kepala Puskesmas Karang Rejo
               </Typography>
               
-              <Typography variant="h6" fontWeight="bold" sx={{ mt: 3 }}>
+              <Box 
+                component="img" 
+                src={ttdImage} 
+                alt="Tanda Tangan" 
+                sx={{ 
+                  height: 160, 
+                  objectFit: "contain",
+                  my: 2,
+                  filter: "invert(1) brightness(1.5) contrast(1.2)", 
+                  mixBlendMode: "screen", 
+                }} 
+              />
+              
+              <Typography variant="h6" fontWeight="bold" sx={{ mt: 1 }}>
                 dr. Hj. Ametta Angastuty
               </Typography>
               <Typography variant="body2" sx={{ color: "#94a3b8", mt: 0.5, letterSpacing: 1 }}>
