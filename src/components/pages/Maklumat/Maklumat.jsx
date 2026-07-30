@@ -132,24 +132,62 @@ const Maklumat = () => {
                 Kepala Puskesmas Karang Rejo
               </Typography>
               
-              <Box 
-                component="img" 
-                src={ttdImage} 
-                alt="Tanda Tangan" 
-                onContextMenu={(e) => e.preventDefault()} 
-                draggable="false"
-                sx={{ 
-                  height: 160, 
-                  objectFit: "contain",
-                  my: 2,
-                  filter: "invert(1) brightness(1.5) contrast(1.2)", 
-                  mixBlendMode: "screen", 
-                  pointerEvents: "none", 
-                  userSelect: "none",
-                  WebkitUserSelect: "none",
-                  WebkitTouchCallout: "none" 
-                }} 
-              />
+              <Box sx={{ position: "relative", display: "inline-block" }}>
+                <Box 
+                  component="img" 
+                  src={ttdImage} 
+                  alt="Tanda Tangan" 
+                  onContextMenu={(e) => e.preventDefault()} 
+                  draggable="false"
+                  sx={{ 
+                    height: 160, 
+                    objectFit: "contain",
+                    my: 2,
+                    filter: "invert(1) brightness(1.5) contrast(1.2)", 
+                    mixBlendMode: "screen", 
+                    pointerEvents: "none", 
+                    userSelect: "none",
+                    WebkitUserSelect: "none",
+                    WebkitTouchCallout: "none" 
+                  }} 
+                />
+                
+                {/* Watermark Overlay CSS */}
+                <Box 
+                  sx={{ 
+                    position: "absolute", 
+                    inset: 0, 
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center", 
+                    justifyContent: "center",
+                    pointerEvents: "none", // Tembus klik
+                    overflow: "hidden",
+                    userSelect: "none",
+                    zIndex: 2
+                  }}
+                >
+                  <Box sx={{ transform: "rotate(-20deg)", opacity: 0.25 }}>
+                    {[...Array(5)].map((_, i) => (
+                      <Typography 
+                        key={i}
+                        sx={{ 
+                          color: "#ffffff",
+                          fontWeight: 900, 
+                          fontSize: "0.85rem",
+                          letterSpacing: 3,
+                          whiteSpace: "nowrap",
+                          lineHeight: 2,
+                          textTransform: "uppercase",
+                          textShadow: "0 0 2px rgba(0,0,0,0.5)" // Membuat teks sedikit berbatas hitam agar memotong warna putih tanda tangan
+                        }}
+                      >
+                        HANYA UNTUK WEBSITE PUSKESMAS KARANG REJO
+                      </Typography>
+                    ))}
+                  </Box>
+                </Box>
+              </Box>
               
               <Typography variant="h6" fontWeight="bold" sx={{ mt: 1 }}>
                 dr. Hj. Ametta Angastuty
