@@ -136,12 +136,18 @@ const Maklumat = () => {
                 component="img" 
                 src={ttdImage} 
                 alt="Tanda Tangan" 
+                onContextMenu={(e) => e.preventDefault()} 
+                draggable="false"
                 sx={{ 
                   height: 160, 
                   objectFit: "contain",
                   my: 2,
                   filter: "invert(1) brightness(1.5) contrast(1.2)", 
                   mixBlendMode: "screen", 
+                  pointerEvents: "none", 
+                  userSelect: "none",
+                  WebkitUserSelect: "none",
+                  WebkitTouchCallout: "none" 
                 }} 
               />
               
