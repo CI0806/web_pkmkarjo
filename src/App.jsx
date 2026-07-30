@@ -28,6 +28,7 @@ import Gallery from "./components/pages/Gallery";
 import Video from "./components/pages/Video";
 import HasilSurvei from "./components/pages/HasilSurvei/HasilSurvei";
 import Pengaduan from "./components/pages/Pengaduan";
+import StandarPelayanan from "./components/pages/StandarPelayanan/StandarPelayanan";
 
 const theme = createTheme({
  typography: {
@@ -154,6 +155,10 @@ const router = createBrowserRouter([
       {
         path: "/pengaduan",
         element: <Pengaduan />,
+      },
+      {
+        path: "/standar-pelayanan",
+        element: <StandarPelayanan />,
       },
     ],
   },

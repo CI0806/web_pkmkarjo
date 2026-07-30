@@ -85,6 +85,7 @@ const Navbar = () => {
       { label: "Hak & Kewajiban Pasien", path: "/hak-kewajiban" },
     ],
     Layanan: [
+      { label: "Standar Pelayanan", path: "/standar-pelayanan" },
       { label: "Jadwal Pelayanan", path: "/jadwal" },
       { label: "Antrian Online", path: "/antrian-online" },
       { label: "Klaster 1 (Manajemen)", path: "/klaster1" },
